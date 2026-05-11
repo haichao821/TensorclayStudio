@@ -1,0 +1,5 @@
+Tensorclay-cli Build Manifest
+Version: v1.1.0 | Date: 2026-05-11
+------------------------------------------------
+1ba05c020841eedf9bcd3ea3fe43d70b5381f10a8d7f0b995f5f8ee2d0b2905c  build/Tensorclay-cli.exe
+34750e1467281ccb221901c90a246b9b43eb06b176f0f8e6b1bbe7ed36e8dc1e  build/Tensorclay-cli-mac

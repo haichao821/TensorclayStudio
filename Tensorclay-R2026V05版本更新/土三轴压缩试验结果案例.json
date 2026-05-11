@@ -1,0 +1,527 @@
+{
+  "cases": [
+    {
+      "case_name": "sigc_50kPa",
+      "model_type": "GPM_CoarseSoil_Guo2018",
+      "blocks": [
+        {
+          "keyword": "UMAT",
+          "attributes": {
+            "MODEL": "MCC"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "e0",
+                "value": "0.65",
+                "label": "初始孔隙比",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "nu",
+                "value": "0.30",
+                "label": "泊松比 (ν)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "n",
+                "value": "0.45",
+                "label": "非线性CSL幂指数 (n)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "hs",
+                "value": "1200",
+                "label": "CSL硬化参量 (hs/kPa)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "kappa",
+                "value": "0.02",
+                "label": "等向回弹指数 (κ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "alpha",
+                "value": "1.10",
+                "label": "剪胀方程形态因子 (α)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "md0",
+                "value": "1.25",
+                "label": "基础剪胀应力比",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "dmd",
+                "value": "0.15",
+                "label": "剪胀应力比修正系数",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "mf0",
+                "value": "1.45",
+                "label": "基础峰值应力比",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "dmf",
+                "value": "0.10",
+                "label": "峰值应力比修正系数",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "beta",
+                "value": "1.50",
+                "label": "塑性模量硬化参数 (β)",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "GP Model for Coarse-grained Soil (Guo 2018)"
+        },
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "TYPE": "SDB_FILE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "path",
+                "value": "/Users/lhc/Desktop/Triaxdb2026-渗流三轴试验数据-Liao2026-数据重构0419/C5/C5_G01.sdb",
+                "label": "SDB File Path",
+                "unit": "File",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Experimental Data Alignment"
+        },
+        {
+          "keyword": "INIT",
+          "attributes": {
+            "TYPE": "STATE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "e0",
+                "value": "0.8",
+                "label": "Initial Void Ratio",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "p",
+                "value": "200",
+                "label": "Mean Stress",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "q",
+                "value": "0.0",
+                "label": "Deviatoric Stress",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "u0",
+                "value": "0.0",
+                "label": "Pore Pressure",
+                "unit": "kPa",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial State (Stress \u0026 Void Ratio)"
+        },
+        {
+          "keyword": "STEP",
+          "attributes": {
+            "ID": "1",
+            "NAME": "Phase_1",
+            "TYPE": "MONO"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "name",
+                "value": "Phase_1",
+                "label": "Step Name",
+                "unit": "",
+                "fixed": true
+              },
+              {
+                "key": "test",
+                "value": "triax_drained",
+                "label": "试验模式",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "triax_drained",
+                  "triax_undrained",
+                  "edometric"
+                ]
+              },
+              {
+                "key": "condition",
+                "value": "epsa",
+                "label": "控制条件",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "epax",
+                  "q",
+                  "p",
+                  "v"
+                ]
+              },
+              {
+                "key": "value",
+                "value": "0.15",
+                "label": "控制目标值",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Monotonic Loading Phase"
+        }
+      ],
+      "updated_at": "2026-05-10T23:36:41.660915+08:00",
+      "PlotLoadType": "mono",
+      "PlotShowme": "true",
+      "PlotDrainType": "drained"
+    },
+    {
+      "case_name": "sigc_100kPa",
+      "model_type": "UH_Clay_Yao2012",
+      "blocks": [
+        {
+          "keyword": "UMAT",
+          "attributes": {
+            "MODEL": "MCC"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "mcs",
+                "value": "1.65",
+                "label": "临界状态应力比 (M)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "gamma",
+                "value": "0.89",
+                "label": "参考孔隙比 (p=1kPa时)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "ramda",
+                "value": "0.08",
+                "label": "压缩指数 (λ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "kappa",
+                "value": "0.004",
+                "label": "回弹指数 (κ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "poi",
+                "value": "0.20",
+                "label": "泊松比 (ν)",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Unified Hardening Model (Yao 2012)"
+        },
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "TYPE": "SDB_FILE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "path",
+                "value": "/Users/lhc/Desktop/Triaxdb2026-渗流三轴试验数据-Liao2026-数据重构0419/C5/C5_G03.sdb",
+                "label": "SDB File Path",
+                "unit": "File",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Experimental Data Alignment"
+        },
+        {
+          "keyword": "INIT",
+          "attributes": {
+            "TYPE": "STATE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "e0",
+                "value": "0.42",
+                "label": "Initial Void Ratio",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "p",
+                "value": "200",
+                "label": "Mean Stress",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "q",
+                "value": "0.0",
+                "label": "Deviatoric Stress",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "u0",
+                "value": "0.0",
+                "label": "Pore Pressure",
+                "unit": "kPa",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial State (Stress \u0026 Void Ratio)"
+        },
+        {
+          "keyword": "STEP",
+          "attributes": {
+            "ID": "1",
+            "NAME": "Phase_1",
+            "TYPE": "MONO"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "test",
+                "value": "triax_drained",
+                "label": "试验模式",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "triax_drained",
+                  "triax_undrained",
+                  "edometric"
+                ]
+              },
+              {
+                "key": "condition",
+                "value": "epsa",
+                "label": "控制条件",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "epax",
+                  "q",
+                  "p",
+                  "v"
+                ]
+              },
+              {
+                "key": "value",
+                "value": "0.15",
+                "label": "控制目标值",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial Loading Phase"
+        }
+      ],
+      "updated_at": "2026-05-09T02:52:11.640584+08:00",
+      "PlotLoadType": "mono",
+      "PlotShowme": "true",
+      "PlotDrainType": "drained"
+    },
+    {
+      "case_name": "sigc_200kPa",
+      "model_type": "UH_Clay_Yao2012",
+      "blocks": [
+        {
+          "keyword": "UMAT",
+          "attributes": {
+            "MODEL": "MCC"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "mcs",
+                "value": "1.65",
+                "label": "临界状态应力比 (M)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "gamma",
+                "value": "0.98",
+                "label": "参考孔隙比 (p=1kPa时)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "ramda",
+                "value": "0.08",
+                "label": "压缩指数 (λ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "kappa",
+                "value": "0.01",
+                "label": "回弹指数 (κ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "poi",
+                "value": "0.20",
+                "label": "泊松比 (ν)",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Unified Hardening Model (Yao 2012)"
+        },
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "TYPE": "SDB_FILE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "path",
+                "value": "/Users/lhc/Desktop/Triaxdb2026-渗流三轴试验数据-Liao2026-数据重构0419/C5/C5_G02.sdb",
+                "label": "SDB File Path",
+                "unit": "File",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Experimental Data Alignment"
+        },
+        {
+          "keyword": "INIT",
+          "attributes": {
+            "TYPE": "STATE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "e0",
+                "value": "0.42",
+                "label": "Initial Void Ratio",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "p",
+                "value": "100",
+                "label": "Mean Stress",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "q",
+                "value": "0.0",
+                "label": "Deviatoric Stress",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "u0",
+                "value": "0.0",
+                "label": "Pore Pressure",
+                "unit": "kPa",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial State (Stress \u0026 Void Ratio)"
+        },
+        {
+          "keyword": "STEP",
+          "attributes": {
+            "ID": "1",
+            "NAME": "Phase_1",
+            "TYPE": "MONO"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "test",
+                "value": "triax_drained",
+                "label": "试验模式",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "triax_drained",
+                  "triax_undrained",
+                  "edometric"
+                ]
+              },
+              {
+                "key": "condition",
+                "value": "epsa",
+                "label": "控制条件",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "epax",
+                  "q",
+                  "p",
+                  "v"
+                ]
+              },
+              {
+                "key": "value",
+                "value": "0.15",
+                "label": "控制目标值",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial Loading Phase"
+        }
+      ],
+      "updated_at": "2026-05-09T02:48:47.296429+08:00",
+      "PlotLoadType": "mono",
+      "PlotShowme": "true",
+      "PlotDrainType": "drained"
+    }
+  ]
+}
