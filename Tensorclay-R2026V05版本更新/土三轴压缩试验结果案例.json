@@ -2,7 +2,7 @@
   "cases": [
     {
       "case_name": "sigc_50kPa",
-      "model_type": "GPM_CoarseSoil_Guo2018",
+      "model_type": "CASM",
       "blocks": [
         {
           "keyword": "UMAT",
@@ -12,85 +12,64 @@
           "data_rows": [
             [
               {
-                "key": "e0",
-                "value": "0.65",
-                "label": "初始孔隙比",
+                "key": "mcs",
+                "value": "1.2",
+                "label": "临界状态应力比 (M)",
                 "unit": "-",
                 "fixed": false
               },
               {
-                "key": "nu",
-                "value": "0.30",
-                "label": "泊松比 (ν)",
+                "key": "gamma",
+                "value": "1.8",
+                "label": "参考孔隙比 (p=1kPa时)",
                 "unit": "-",
                 "fixed": false
               },
               {
-                "key": "n",
-                "value": "0.45",
-                "label": "非线性CSL幂指数 (n)",
-                "unit": "-",
-                "fixed": false
-              },
-              {
-                "key": "hs",
-                "value": "1200",
-                "label": "CSL硬化参量 (hs/kPa)",
+                "key": "ramda",
+                "value": "0.15",
+                "label": "压缩指数 (λ)",
                 "unit": "-",
                 "fixed": false
               },
               {
                 "key": "kappa",
-                "value": "0.02",
-                "label": "等向回弹指数 (κ)",
+                "value": "0.03",
+                "label": "回弹指数 (κ)",
                 "unit": "-",
                 "fixed": false
               },
               {
-                "key": "alpha",
-                "value": "1.10",
-                "label": "剪胀方程形态因子 (α)",
+                "key": "poi",
+                "value": "0.25",
+                "label": "泊松比 (ν)",
                 "unit": "-",
                 "fixed": false
               },
               {
-                "key": "md0",
-                "value": "1.25",
-                "label": "基础剪胀应力比",
+                "key": "r",
+                "value": "2.0",
+                "label": "间隔比 (Space Ratio)",
                 "unit": "-",
                 "fixed": false
               },
               {
-                "key": "dmd",
-                "value": "0.15",
-                "label": "剪胀应力比修正系数",
+                "key": "n",
+                "value": "1.5",
+                "label": "屈服面形状参数 (n)",
                 "unit": "-",
                 "fixed": false
               },
               {
-                "key": "mf0",
-                "value": "1.45",
-                "label": "基础峰值应力比",
-                "unit": "-",
-                "fixed": false
-              },
-              {
-                "key": "dmf",
-                "value": "0.10",
-                "label": "峰值应力比修正系数",
-                "unit": "-",
-                "fixed": false
-              },
-              {
-                "key": "beta",
-                "value": "1.50",
-                "label": "塑性模量硬化参数 (β)",
+                "key": "omega",
+                "value": "0.0",
+                "label": "剪切硬化参数 (ω)",
                 "unit": "-",
                 "fixed": false
               }
             ]
           ],
-          "desc": "GP Model for Coarse-grained Soil (Guo 2018)"
+          "desc": "CASM (Clay and Sand Model)"
         },
         {
           "keyword": "DATA",
@@ -101,7 +80,7 @@
             [
               {
                 "key": "path",
-                "value": "/Users/lhc/Desktop/Triaxdb2026-渗流三轴试验数据-Liao2026-数据重构0419/C5/C5_G01.sdb",
+                "value": "/Users/lhc/Documents/TensorclayStudio/Tensorclay-R2026V05版本更新/土三轴压缩试验结果案例/C5_G01.sdb",
                 "label": "SDB File Path",
                 "unit": "File",
                 "fixed": false
@@ -202,7 +181,7 @@
           "desc": "Monotonic Loading Phase"
         }
       ],
-      "updated_at": "2026-05-10T23:36:41.660915+08:00",
+      "updated_at": "2026-05-11T15:17:05.379796+08:00",
       "PlotLoadType": "mono",
       "PlotShowme": "true",
       "PlotDrainType": "drained"
@@ -266,7 +245,7 @@
             [
               {
                 "key": "path",
-                "value": "/Users/lhc/Desktop/Triaxdb2026-渗流三轴试验数据-Liao2026-数据重构0419/C5/C5_G03.sdb",
+                "value": "/Users/lhc/Documents/TensorclayStudio/Tensorclay-R2026V05版本更新/土三轴压缩试验结果案例/C5_G02.sdb",
                 "label": "SDB File Path",
                 "unit": "File",
                 "fixed": false
@@ -424,7 +403,7 @@
             [
               {
                 "key": "path",
-                "value": "/Users/lhc/Desktop/Triaxdb2026-渗流三轴试验数据-Liao2026-数据重构0419/C5/C5_G02.sdb",
+                "value": "/Users/lhc/Documents/TensorclayStudio/Tensorclay-R2026V05版本更新/土三轴压缩试验结果案例/C5_G03.sdb",
                 "label": "SDB File Path",
                 "unit": "File",
                 "fixed": false
