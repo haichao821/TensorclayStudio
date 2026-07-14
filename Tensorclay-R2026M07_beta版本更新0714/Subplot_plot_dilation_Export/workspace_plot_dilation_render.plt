@@ -93,11 +93,11 @@ unset logscale
 set tics in nomirror font ',18' scale 1.5, 0.75
 set format x '%-g'
 set format y '%-g'
-set mxtics 1
-set mytics 1
+set mxtics 5
+set mytics 5
 
-set xlabel 'Stress ratio {/Symbol h}' textcolor rgb 'black' font ',18' offset 0,-0.6
-set ylabel 'Dilatancy rate {/:Italic d}' textcolor rgb 'black' font ',18' offset -3.2,0
+set xlabel '轴向应变 {/Symbol e}_{a} / %' textcolor rgb 'black' font ',18' offset 0,-0.6
+set ylabel '偏应力 {/:Italic q} / kPa' textcolor rgb 'black' font ',18' offset -3.2,0
 
 unset logscale
 set offsets 0, 0, 0, 0
