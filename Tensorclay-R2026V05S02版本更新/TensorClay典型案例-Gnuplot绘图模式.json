@@ -2,7 +2,7 @@
   "cases": [
     {
       "case_name": "sigc_50kPa",
-      "model_type": "HASP_Clay",
+      "model_type": "NOGP_Beta",
       "blocks": [
         {
           "keyword": "UMAT",
@@ -13,7 +13,7 @@
             [
               {
                 "key": "mcs",
-                "value": "1.45",
+                "value": "1.05",
                 "label": "临界状态应力比 (M)",
                 "unit": "-",
                 "fixed": false
@@ -21,34 +21,69 @@
               {
                 "key": "gamma",
                 "value": "1.21",
-                "label": "参考孔隙比 (p=1kPa时)",
+                "label": "临界状态参考孔隙比 (p=1kPa)",
                 "unit": "-",
                 "fixed": false
               },
               {
                 "key": "ramda",
-                "value": "0.092",
-                "label": "压缩指数 (λ)",
-                "unit": "-",
-                "fixed": false
-              },
-              {
-                "key": "kappa",
-                "value": "0.02",
-                "label": "回弹指数 (κ)",
+                "value": "0.08",
+                "label": "等向压缩曲线斜率 (λ)",
                 "unit": "-",
                 "fixed": false
               },
               {
                 "key": "poi",
                 "value": "0.20",
-                "label": "泊松比 (ν)",
+                "label": "泊松比 (v)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "ps",
+                "value": "100.0",
+                "label": "e-p平面内CSL控制参数 (p_s)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "G0",
+                "value": "42.0",
+                "label": "参考剪切模量参数 (G0)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "m",
+                "value": "1.2",
+                "label": "分数阶次演化参数 (m)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "k",
+                "value": "1.8",
+                "label": "峰值强度相关参数 (k)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "h0",
+                "value": "1.6",
+                "label": "塑性模量硬化参数 (h0)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "beta",
+                "value": "1.0",
+                "label": "屈服面形状参数 (Beta)",
                 "unit": "-",
                 "fixed": false
               }
             ]
           ],
-          "desc": "Bounding Surface Model for OC Clays (Jocković 2017)"
+          "desc": "NOGP Model (Beta-shape)"
         },
         {
           "keyword": "DATA",
@@ -224,14 +259,14 @@
             [
               {
                 "key": "e0",
-                "value": "0.65",
+                "value": "0.78",
                 "label": "Initial Void Ratio",
                 "unit": "-",
                 "fixed": false
               },
               {
                 "key": "p",
-                "value": "50",
+                "value": "600",
                 "label": "Mean Stress",
                 "unit": "kPa",
                 "fixed": false
@@ -272,7 +307,7 @@
               },
               {
                 "key": "test",
-                "value": "triax_drained",
+                "value": "triax_undrained",
                 "label": "试验模式",
                 "unit": "",
                 "fixed": false,
@@ -297,7 +332,7 @@
               },
               {
                 "key": "value",
-                "value": "0.16",
+                "value": "0.3",
                 "label": "控制目标值",
                 "unit": "-",
                 "fixed": false
@@ -307,7 +342,7 @@
           "desc": "Monotonic Loading Phase"
         }
       ],
-      "updated_at": "2026-05-25T18:31:48.682019+08:00",
+      "updated_at": "2026-06-20T02:18:55.407313+08:00",
       "PlotLoadType": "mono",
       "PlotShowme": "true",
       "PlotDrainType": "drained",
@@ -334,7 +369,7 @@
     },
     {
       "case_name": "sigc_100kPa",
-      "model_type": "HASP_Clay",
+      "model_type": "NOGP_Beta",
       "blocks": [
         {
           "keyword": "UMAT",
@@ -345,7 +380,7 @@
             [
               {
                 "key": "mcs",
-                "value": "1.45",
+                "value": "1.05",
                 "label": "临界状态应力比 (M)",
                 "unit": "-",
                 "fixed": false
@@ -353,34 +388,69 @@
               {
                 "key": "gamma",
                 "value": "1.21",
-                "label": "参考孔隙比 (p=1kPa时)",
+                "label": "临界状态参考孔隙比 (p=1kPa)",
                 "unit": "-",
                 "fixed": false
               },
               {
                 "key": "ramda",
-                "value": "0.092",
-                "label": "压缩指数 (λ)",
-                "unit": "-",
-                "fixed": false
-              },
-              {
-                "key": "kappa",
-                "value": "0.02",
-                "label": "回弹指数 (κ)",
+                "value": "0.08",
+                "label": "等向压缩曲线斜率 (λ)",
                 "unit": "-",
                 "fixed": false
               },
               {
                 "key": "poi",
                 "value": "0.20",
-                "label": "泊松比 (ν)",
+                "label": "泊松比 (v)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "ps",
+                "value": "100.0",
+                "label": "e-p平面内CSL控制参数 (p_s)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "G0",
+                "value": "42.0",
+                "label": "参考剪切模量参数 (G0)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "m",
+                "value": "1.2",
+                "label": "分数阶次演化参数 (m)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "k",
+                "value": "1.8",
+                "label": "峰值强度相关参数 (k)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "h0",
+                "value": "1.6",
+                "label": "塑性模量硬化参数 (h0)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "beta",
+                "value": "1.0",
+                "label": "屈服面形状参数 (Beta)",
                 "unit": "-",
                 "fixed": false
               }
             ]
           ],
-          "desc": "Bounding Surface Model for OC Clays (Jocković 2017)"
+          "desc": "NOGP Model (Beta-shape)"
         },
         {
           "keyword": "DATA",
@@ -409,14 +479,14 @@
             [
               {
                 "key": "e0",
-                "value": "0.65",
+                "value": "0.92",
                 "label": "Initial Void Ratio",
                 "unit": "-",
                 "fixed": false
               },
               {
                 "key": "p",
-                "value": "200",
+                "value": "800",
                 "label": "Mean Stress",
                 "unit": "kPa",
                 "fixed": false
@@ -450,7 +520,7 @@
             [
               {
                 "key": "test",
-                "value": "triax_drained",
+                "value": "triax_undrained",
                 "label": "试验模式",
                 "unit": "",
                 "fixed": false,
@@ -475,7 +545,7 @@
               },
               {
                 "key": "value",
-                "value": "0.15",
+                "value": "0.3",
                 "label": "控制目标值",
                 "unit": "-",
                 "fixed": false
@@ -485,7 +555,7 @@
           "desc": "Initial Loading Phase"
         }
       ],
-      "updated_at": "2026-05-25T18:05:17.803215+08:00",
+      "updated_at": "2026-06-20T02:20:35.480568+08:00",
       "PlotLoadType": "mono",
       "PlotShowme": "true",
       "PlotDrainType": "drained",
@@ -512,7 +582,7 @@
     },
     {
       "case_name": "sigc_200kPa",
-      "model_type": "HASP_Clay",
+      "model_type": "NOGP_Beta",
       "blocks": [
         {
           "keyword": "UMAT",
@@ -523,7 +593,7 @@
             [
               {
                 "key": "mcs",
-                "value": "1.45",
+                "value": "1.05",
                 "label": "临界状态应力比 (M)",
                 "unit": "-",
                 "fixed": false
@@ -531,34 +601,69 @@
               {
                 "key": "gamma",
                 "value": "1.21",
-                "label": "参考孔隙比 (p=1kPa时)",
+                "label": "临界状态参考孔隙比 (p=1kPa)",
                 "unit": "-",
                 "fixed": false
               },
               {
                 "key": "ramda",
-                "value": "0.092",
-                "label": "压缩指数 (λ)",
-                "unit": "-",
-                "fixed": false
-              },
-              {
-                "key": "kappa",
-                "value": "0.02",
-                "label": "回弹指数 (κ)",
+                "value": "0.08",
+                "label": "等向压缩曲线斜率 (λ)",
                 "unit": "-",
                 "fixed": false
               },
               {
                 "key": "poi",
                 "value": "0.20",
-                "label": "泊松比 (ν)",
+                "label": "泊松比 (v)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "ps",
+                "value": "100.0",
+                "label": "e-p平面内CSL控制参数 (p_s)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "G0",
+                "value": "42.0",
+                "label": "参考剪切模量参数 (G0)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "m",
+                "value": "3.2",
+                "label": "分数阶次演化参数 (m)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "k",
+                "value": "1.8",
+                "label": "峰值强度相关参数 (k)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "h0",
+                "value": "1.6",
+                "label": "塑性模量硬化参数 (h0)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "beta",
+                "value": "1.0",
+                "label": "屈服面形状参数 (Beta)",
                 "unit": "-",
                 "fixed": false
               }
             ]
           ],
-          "desc": "Bounding Surface Model for OC Clays (Jocković 2017)"
+          "desc": "NOGP Model (Beta-shape)"
         },
         {
           "keyword": "DATA",
@@ -622,10 +727,17 @@
           "attributes": {
             "ID": "1",
             "NAME": "Phase_1",
-            "TYPE": "MONO"
+            "TYPE": "DYNA"
           },
           "data_rows": [
             [
+              {
+                "key": "name",
+                "value": "Phase_1",
+                "label": "Step Name",
+                "unit": "",
+                "fixed": true
+              },
               {
                 "key": "test",
                 "value": "triax_drained",
@@ -634,36 +746,58 @@
                 "fixed": false,
                 "options": [
                   "triax_drained",
-                  "triax_undrained",
-                  "edometric"
+                  "triax_undrained"
                 ]
               },
               {
                 "key": "condition",
                 "value": "epsa",
-                "label": "控制条件",
+                "label": "循环控制项",
                 "unit": "",
                 "fixed": false,
                 "options": [
-                  "epax",
                   "q",
-                  "p",
-                  "v"
+                  "epsa"
                 ]
               },
               {
-                "key": "value",
-                "value": "0.15",
-                "label": "控制目标值",
-                "unit": "-",
+                "key": "baseline",
+                "value": "100",
+                "label": "静应力基准",
+                "unit": "kPa",
                 "fixed": false
+              },
+              {
+                "key": "value",
+                "value": "0.05",
+                "label": "动应力幅值",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "cycles",
+                "value": "100",
+                "label": "循环周数",
+                "unit": "N",
+                "fixed": false
+              },
+              {
+                "key": "symmetry",
+                "value": "off",
+                "label": "对称性模式",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "off",
+                  "on"
+                ]
               }
             ]
           ],
-          "desc": "Initial Loading Phase"
+          "desc": "Cyclic Loading Phase"
         }
       ],
-      "updated_at": "2026-05-25T18:06:16.137847+08:00",
+      "updated_at": "2026-06-20T02:32:07.564911+08:00",
       "PlotLoadType": "mono",
       "PlotShowme": "true",
       "PlotDrainType": "drained",
