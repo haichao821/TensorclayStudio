@@ -1,0 +1,4481 @@
+{
+  "cases": [
+    {
+      "case_name": "CU-等围压排水三轴试验",
+      "model_type": "FSH_Clay",
+      "blocks": [
+        {
+          "keyword": "UMAT",
+          "attributes": {
+            "MODEL": "MCC"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "mcs",
+                "value": "1.05",
+                "label": "临界状态应力比 (M)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "gamma",
+                "value": "1.21",
+                "label": "参考孔隙比 (p=1kPa时)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "ramda",
+                "value": "0.08",
+                "label": "压缩指数 (λ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "kappa",
+                "value": "0.02",
+                "label": "回弹指数 (κ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "poi",
+                "value": "0.20",
+                "label": "泊松比 (ν)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "m",
+                "value": "1.0",
+                "label": "分数阶控制参数 (确定流动方向)",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Fractional State-Hardening Model (Li 2019)"
+        },
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "TYPE": "SDB_FILE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "path",
+                "value": "",
+                "label": "SDB File Path",
+                "unit": "File",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Experimental Data Alignment"
+        },
+        {
+          "keyword": "INIT",
+          "attributes": {
+            "TYPE": "STATE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "e0",
+                "value": "0.8",
+                "label": "Initial Void Ratio",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "p",
+                "value": "100.0",
+                "label": "Mean Stress",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "q",
+                "value": "0.0",
+                "label": "Deviatoric Stress",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "u0",
+                "value": "0.0",
+                "label": "Pore Pressure",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "ocr",
+                "value": "1.0",
+                "label": "Overconsolidation Ratio (OCR)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "p0",
+                "value": "100.0",
+                "label": "Initial Yield Stress (p0)",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "rs0",
+                "value": "0.0",
+                "label": "Initial Structure parameter (rs0)",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial State (Stress \u0026 Void Ratio)"
+        },
+        {
+          "keyword": "STEP",
+          "attributes": {
+            "ID": "1",
+            "NAME": "Phase_1",
+            "TYPE": "MONO"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "test",
+                "value": "triax_drained",
+                "label": "Test Mode",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "triax_drained",
+                  "triax_undrained",
+                  "triax_constp",
+                  "triax_constq",
+                  "iso_comp",
+                  "simple_shear_drained",
+                  "simple_shear_undrained",
+                  "triax_k0"
+                ]
+              },
+              {
+                "key": "condition",
+                "value": "epsa",
+                "label": "Control Mode",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "epax",
+                  "q",
+                  "p",
+                  "v",
+                  "gamma"
+                ]
+              },
+              {
+                "key": "value",
+                "value": "0.3",
+                "label": "Target Value",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial Loading Phase"
+        }
+      ],
+      "updated_at": "2026-07-18T11:27:41.186175+08:00",
+      "PlotLoadType": "mono",
+      "PlotShowme": "true",
+      "PlotDrainType": "drained",
+      "data_source": {
+        "sim_data_path": "",
+        "exp_data_path": ""
+      },
+      "gnuplot_style": {
+        "enabled": false,
+        "sim_line": {
+          "lc": "",
+          "lw": 0,
+          "lt": 0,
+          "label": ""
+        },
+        "exp_point": {
+          "pc": "",
+          "ps": 0,
+          "pt": 0,
+          "label": "",
+          "show": false
+        }
+      }
+    },
+    {
+      "case_name": "CU-等围压不排水三轴试验",
+      "model_type": "FSH_Clay",
+      "blocks": [
+        {
+          "keyword": "UMAT",
+          "attributes": {
+            "MODEL": "MCC"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "mcs",
+                "value": "1.05",
+                "label": "临界状态应力比 (M)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "gamma",
+                "value": "1.21",
+                "label": "参考孔隙比 (p=1kPa时)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "ramda",
+                "value": "0.08",
+                "label": "压缩指数 (λ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "kappa",
+                "value": "0.02",
+                "label": "回弹指数 (κ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "poi",
+                "value": "0.20",
+                "label": "泊松比 (ν)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "m",
+                "value": "1.0",
+                "label": "分数阶控制参数 (确定流动方向)",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Fractional State-Hardening Model (Li 2019)"
+        },
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "TYPE": "SDB_FILE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "path",
+                "value": "",
+                "label": "SDB File Path",
+                "unit": "File",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Experimental Data Alignment"
+        },
+        {
+          "keyword": "INIT",
+          "attributes": {
+            "TYPE": "STATE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "e0",
+                "value": "0.8",
+                "label": "Initial Void Ratio",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "p",
+                "value": "100.0",
+                "label": "Mean Stress",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "q",
+                "value": "0.0",
+                "label": "Deviatoric Stress",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "u0",
+                "value": "0.0",
+                "label": "Pore Pressure",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "ocr",
+                "value": "1.0",
+                "label": "Overconsolidation Ratio (OCR)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "p0",
+                "value": "100.0",
+                "label": "Initial Yield Stress (p0)",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "rs0",
+                "value": "0.0",
+                "label": "Initial Structure parameter (rs0)",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial State (Stress \u0026 Void Ratio)"
+        },
+        {
+          "keyword": "STEP",
+          "attributes": {
+            "ID": "1",
+            "NAME": "Phase_1",
+            "TYPE": "MONO"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "test",
+                "value": "triax_undrained",
+                "label": "Test Mode",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "triax_drained",
+                  "triax_undrained",
+                  "triax_constp",
+                  "triax_constq",
+                  "iso_comp",
+                  "simple_shear_drained",
+                  "simple_shear_undrained",
+                  "triax_k0"
+                ]
+              },
+              {
+                "key": "condition",
+                "value": "epsa",
+                "label": "Control Mode",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "epax",
+                  "q",
+                  "p",
+                  "v",
+                  "gamma"
+                ]
+              },
+              {
+                "key": "value",
+                "value": "0.3",
+                "label": "Target Value",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial Loading Phase"
+        }
+      ],
+      "updated_at": "2026-07-15T13:25:25.708647+08:00",
+      "PlotLoadType": "mono",
+      "PlotShowme": "true",
+      "PlotDrainType": "drained",
+      "data_source": {
+        "sim_data_path": "",
+        "exp_data_path": ""
+      },
+      "gnuplot_style": {
+        "enabled": false,
+        "sim_line": {
+          "lc": "",
+          "lw": 0,
+          "lt": 0,
+          "label": ""
+        },
+        "exp_point": {
+          "pc": "",
+          "ps": 0,
+          "pt": 0,
+          "label": "",
+          "show": false
+        }
+      }
+    },
+    {
+      "case_name": "CD-等p排水三轴试验",
+      "model_type": "FSH_Clay",
+      "blocks": [
+        {
+          "keyword": "UMAT",
+          "attributes": {
+            "MODEL": "MCC"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "mcs",
+                "value": "1.05",
+                "label": "临界状态应力比 (M)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "gamma",
+                "value": "1.21",
+                "label": "参考孔隙比 (p=1kPa时)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "ramda",
+                "value": "0.08",
+                "label": "压缩指数 (λ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "kappa",
+                "value": "0.02",
+                "label": "回弹指数 (κ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "poi",
+                "value": "0.20",
+                "label": "泊松比 (ν)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "m",
+                "value": "1.0",
+                "label": "分数阶控制参数 (确定流动方向)",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Fractional State-Hardening Model (Li 2019)"
+        },
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "TYPE": "SDB_FILE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "path",
+                "value": "",
+                "label": "SDB File Path",
+                "unit": "File",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Experimental Data Alignment"
+        },
+        {
+          "keyword": "INIT",
+          "attributes": {
+            "TYPE": "STATE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "e0",
+                "value": "0.8",
+                "label": "Initial Void Ratio",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "p",
+                "value": "100.0",
+                "label": "Mean Stress",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "q",
+                "value": "0.0",
+                "label": "Deviatoric Stress",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "u0",
+                "value": "0.0",
+                "label": "Pore Pressure",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "ocr",
+                "value": "1.0",
+                "label": "Overconsolidation Ratio (OCR)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "p0",
+                "value": "100.0",
+                "label": "Initial Yield Stress (p0)",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "rs0",
+                "value": "0.0",
+                "label": "Initial Structure parameter (rs0)",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial State (Stress \u0026 Void Ratio)"
+        },
+        {
+          "keyword": "STEP",
+          "attributes": {
+            "ID": "1",
+            "NAME": "Phase_1",
+            "TYPE": "MONO"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "test",
+                "value": "triax_constp",
+                "label": "Test Mode",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "triax_drained",
+                  "triax_undrained",
+                  "triax_constp",
+                  "triax_constq",
+                  "iso_comp",
+                  "simple_shear_drained",
+                  "simple_shear_undrained",
+                  "triax_k0"
+                ]
+              },
+              {
+                "key": "condition",
+                "value": "epsa",
+                "label": "Control Mode",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "epax",
+                  "q",
+                  "p",
+                  "v",
+                  "gamma"
+                ]
+              },
+              {
+                "key": "value",
+                "value": "0.3",
+                "label": "Target Value",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial Loading Phase"
+        }
+      ],
+      "updated_at": "2026-07-16T00:58:27.058494+08:00",
+      "PlotLoadType": "mono",
+      "PlotShowme": "true",
+      "PlotDrainType": "drained",
+      "data_source": {
+        "sim_data_path": "",
+        "exp_data_path": ""
+      },
+      "gnuplot_style": {
+        "enabled": false,
+        "sim_line": {
+          "lc": "",
+          "lw": 0,
+          "lt": 0,
+          "label": ""
+        },
+        "exp_point": {
+          "pc": "",
+          "ps": 0,
+          "pt": 0,
+          "label": "",
+          "show": false
+        }
+      }
+    }
+  ],
+  "active_solver_id": "tensorclay",
+  "solver_history": {},
+  "active_gnuplot_idx": 2,
+  "gnuplot_configs": [
+    {
+      "graph_title": "plot_260715_001",
+      "blocks": [
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "enable_CD-等p排水三轴试验": "YES",
+            "enable_CU-等围压不排水三轴试验": "YES",
+            "enable_CU-等围压排水三轴试验": "YES",
+            "exp_CD-等p排水三轴试验": "CD-等p排水三轴试验",
+            "exp_CU-等围压不排水三轴试验": "CU-等围压不排水三轴试验",
+            "exp_CU-等围压排水三轴试验": "CU-等围压排水三轴试验",
+            "exp_enable_CD-等p排水三轴试验": "YES",
+            "exp_enable_CU-等围压不排水三轴试验": "YES",
+            "exp_enable_CU-等围压排水三轴试验": "YES",
+            "global_plot_mode": "ALL",
+            "plot_content_mode_CD-等p排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压不排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压排水三轴试验": "ALL",
+            "sim_CD-等p排水三轴试验": "Sim CD-等p排水三轴试验",
+            "sim_CU-等围压不排水三轴试验": "Sim CU-等围压不排水三轴试验",
+            "sim_CU-等围压排水三轴试验": "Sim CU-等围压排水三轴试验",
+            "sim_enable_CD-等p排水三轴试验": "YES",
+            "sim_enable_CU-等围压不排水三轴试验": "YES",
+            "sim_enable_CU-等围压排水三轴试验": "YES",
+            "x_col": "0",
+            "y_col": "8"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "x_col",
+                "value": "0",
+                "label": " [yellow::b]⌖ X-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "y_col",
+                "value": "8",
+                "label": " [yellow::b]⌖ Y-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "global_plot_mode",
+                "value": "ALL",
+                "label": " [yellow::b]⌖ 数据切换模式?[-] ",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "ALL",
+                  "EXP_ONLY",
+                  "SIM_ONLY"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": " [dodgerblue::b]• CASE: CU-等围压排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压排水三轴试验",
+                "value": "Sim CU-等围压排水三轴试验",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": " [black::b]• CASE: CU-等围压不排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压不排水三轴试验",
+                "value": "Sim CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压不排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": " [black::b]• CASE: CD-等p排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CD-等p排水三轴试验",
+                "value": "Sim CD-等p排水三轴试验",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CD-等p排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ]
+          ],
+          "desc": "Gnuplot Data alignment \u0026 Column mapping"
+        },
+        {
+          "keyword": "FIGURE",
+          "attributes": {
+            "FONT_FACE": "Times-New-Roman",
+            "FONT_SIZE": "14",
+            "OUTPUT": "plot_res.pdf",
+            "TERM": "pdfcairo"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "canvas_w",
+                "value": "5.00in",
+                "label": " Canvas Width",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Horizontal length of the rendering viewport"
+              },
+              {
+                "key": "canvas_h",
+                "value": "3.00in",
+                "label": " Canvas Height",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Vertical length of the rendering viewport"
+              },
+              {
+                "key": "enhanced",
+                "value": "enhanced",
+                "label": " Enhanced Text Mode",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "enhanced",
+                  "noenhanced"
+                ],
+                "hint": "Enable formatting for Greek letters, symbols, and sub/superscripts"
+              },
+              {
+                "key": "palette",
+                "value": "Legacy-RGB",
+                "label": " Color Palette",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "Elsevier-Classic",
+                  "Mono-Print",
+                  "Stress-Gradient",
+                  "Nature-Geology",
+                  "Colorblind-Friendly",
+                  "Geotechnique-Classic",
+                  "Legacy-RGB"
+                ],
+                "hint": "Standardized academic color schemes and line styles"
+              },
+              {
+                "key": "color",
+                "value": "color",
+                "label": " Line Color Mode",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "color",
+                  "mono"
+                ],
+                "hint": "Switch between chromatic spectrum and pure monochrome lines"
+              },
+              {
+                "key": "background",
+                "value": "white",
+                "label": " Background Color",
+                "unit": "rgb",
+                "fixed": true,
+                "options": [
+                  "white",
+                  "transparent",
+                  "gray95",
+                  "gray90"
+                ],
+                "hint": "Canvas background color specification"
+              },
+              {
+                "key": "plot_gradient",
+                "value": "Cool-Gray",
+                "label": " Plot Area Gradient",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "None",
+                  "Cool-Gray",
+                  "Soft-Blue",
+                  "Warm-Sand",
+                  "Eco-Green"
+                ],
+                "hint": "Gradient background inside the plot border (graph area)"
+              }
+            ]
+          ],
+          "desc": "Terminal settings \u0026 Canvas dimensions"
+        },
+        {
+          "keyword": "AXES",
+          "attributes": {
+            "AXIS_LANG": "ZH",
+            "GRID": "xtics ytics",
+            "KEY_COLUMNS": "2",
+            "KEY_POS": "top right",
+            "LOGSCALE": "none",
+            "ZEROAXIS": "off"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "title",
+                "value": "",
+                "label": "Main Title",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Main title text of the plot. Empty indicates LaTeX caption mode."
+              },
+              {
+                "key": "subtitle",
+                "value": "",
+                "label": "Subtitle",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Secondary subtitle text displayed under the main title."
+              }
+            ],
+            [
+              {
+                "key": "key_columns",
+                "value": "2",
+                "label": "Legend Columns",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of columns to split the legend entries into"
+              },
+              {
+                "key": "key_pos",
+                "value": "top right",
+                "label": "Legend Position",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "top right",
+                  "top left",
+                  "bottom right",
+                  "bottom left",
+                  "outside",
+                  "off"
+                ],
+                "hint": "Spatial anchoring zone for gnuplot key/legend panel"
+              }
+            ],
+            [
+              {
+                "key": "grid",
+                "value": "xtics ytics",
+                "label": "Grid Line Style",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "xtics ytics",
+                  "xtics ytics mxtics mytics",
+                  "off"
+                ],
+                "hint": "Toggle standard or high-density minor tics grid overlay"
+              },
+              {
+                "key": "zeroaxis",
+                "value": "off",
+                "label": "ZeroAxis (on/off)",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "off",
+                  "on"
+                ],
+                "hint": "Draw prominence lines for X=0 and Y=0 baselines"
+              }
+            ],
+            [
+              {
+                "key": "logscale",
+                "value": "none",
+                "label": "LogScale (x/y/xy)",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "none",
+                  "x",
+                  "y",
+                  "xy"
+                ],
+                "hint": "Transform specific rendering dimension into logarithmic space"
+              },
+              {
+                "key": "axis_lang",
+                "value": "ZH",
+                "label": "Language (ZH/EN)",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "ZH",
+                  "EN"
+                ],
+                "hint": "Toggle dynamic axis dialect translation between English and Chinese"
+              }
+            ]
+          ],
+          "desc": "Subplot \u0026 Graph title configurations"
+        },
+        {
+          "keyword": "ARTIST",
+          "attributes": {
+            "EXP_STYLE": "points",
+            "LINE_TYPE": "1",
+            "LINE_WIDTH": "4.0",
+            "MARK_LINE_WIDTH": "1.5",
+            "MARK_SIZE": "0.8",
+            "MARK_TYPE": "auto",
+            "SMOOTH": "none",
+            "STYLE": "points",
+            "exp_skip_CD-等p排水三轴试验": "1",
+            "exp_skip_CU-等围压不排水三轴试验": "1",
+            "exp_skip_CU-等围压排水三轴试验": "1",
+            "exp_x_CD-等p排水三轴试验": "1.0",
+            "exp_x_CU-等围压不排水三轴试验": "1.0",
+            "exp_x_CU-等围压排水三轴试验": "1.0",
+            "exp_y_CD-等p排水三轴试验": "1.0",
+            "exp_y_CU-等围压不排水三轴试验": "1.0",
+            "exp_y_CU-等围压排水三轴试验": "1.0",
+            "sim_x_CD-等p排水三轴试验": "1.0",
+            "sim_x_CU-等围压不排水三轴试验": "1.0",
+            "sim_x_CU-等围压排水三轴试验": "1.0",
+            "sim_y_CD-等p排水三轴试验": "1.0",
+            "sim_y_CU-等围压不排水三轴试验": "1.0",
+            "sim_y_CU-等围压排水三轴试验": "1.0"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "case_header_CU-等围压排水三轴试验",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: CU-等围压排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_CU-等围压排水三轴试验",
+                "value": "1",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_CU-等围压不排水三轴试验",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: CU-等围压不排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_CU-等围压不排水三轴试验",
+                "value": "1",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_CD-等p排水三轴试验",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: CD-等p排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_CD-等p排水三轴试验",
+                "value": "1",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Line styles, Point types \u0026 Colors"
+        },
+        {
+          "keyword": "AXIS",
+          "attributes": {
+            "AXIS_LANG": "EN",
+            "FORMAT_X": "%.2f",
+            "FORMAT_Y": "%-g",
+            "RANGE_MODE": "Fixed",
+            "SCALE": "Linear",
+            "TICS_OUT": "in",
+            "XTICS_AUTO_STEP": "0.100000",
+            "XTICS_NUM": "4",
+            "X_LABEL_VAL": "Axial strain {/Symbol e}_{a} / %",
+            "Y_LABEL_VAL": "Stress ratio {/Symbol h}"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "xtic_fmt",
+                "value": "%.2f",
+                "label": "[blue][-] X-Tick Fmt ",
+                "unit": "",
+                "fixed": false,
+                "hint": "Format string for X-axis tick labels (e.g., %g, %.2f)"
+              },
+              {
+                "key": "ytic_fmt",
+                "value": "%-g",
+                "label": "[blue][-] Y-Tick Fmt ",
+                "unit": "",
+                "fixed": false,
+                "hint": "Format string for Y-axis tick labels (e.g., %g, %.2f)"
+              },
+              {
+                "key": "mx_tics",
+                "value": "1",
+                "label": "[gray][-] X Minor Tics",
+                "unit": "",
+                "fixed": false,
+                "hint": "Number of minor intervals between major X tics"
+              },
+              {
+                "key": "my_tics",
+                "value": "1",
+                "label": "[gray][-] Y Minor Tics",
+                "unit": "",
+                "fixed": false,
+                "hint": "Number of minor intervals between major Y tics"
+              }
+            ],
+            [
+              {
+                "key": "x_min",
+                "value": "0",
+                "label": "[yellow][-] X Min (Fixed)",
+                "unit": "",
+                "fixed": false,
+                "hint": "Minimum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "x_max",
+                "value": "0.4",
+                "label": "[yellow][-] X Max (Fixed)",
+                "unit": "",
+                "fixed": false,
+                "hint": "Maximum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_min",
+                "value": "0",
+                "label": "[yellow][-] Y Min (Fixed)",
+                "unit": "",
+                "fixed": false,
+                "hint": "Minimum boundary for Y axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_max",
+                "value": "2",
+                "label": "[yellow][-] Y Max (Fixed)",
+                "unit": "",
+                "fixed": false,
+                "hint": "Maximum boundary for Y axis. Use '*' for auto-fit"
+              }
+            ]
+          ],
+          "desc": "Tics, Labels \u0026 Range settings"
+        },
+        {
+          "keyword": "LAYOUT",
+          "attributes": {
+            "AXIS_LANG": "EN",
+            "FORMAT_X": "%.2f",
+            "FORMAT_Y": "%-g",
+            "GRID": "xtics ytics",
+            "KEY_COLUMNS": "2",
+            "KEY_POS": "top right",
+            "RANGE_MODE": "Auto-fit",
+            "SCALE": "Linear",
+            "TICS_OUT": "in",
+            "XTICS_AUTO_STEP": "0.100000",
+            "XTICS_NUM": "4",
+            "X_LABEL_VAL": "Axial strain {/Symbol e}_{a} / %",
+            "Y_LABEL_VAL": "Stress ratio {/Symbol h}",
+            "ZEROAXIS": "off"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "axis_lang",
+                "value": "EN",
+                "label": " Language     ",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "EN",
+                  "ZH"
+                ],
+                "hint": "Switch axis labels and tutorial language (English / Chinese)"
+              },
+              {
+                "key": "scale",
+                "value": "Linear",
+                "label": " Coordinate   ",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "Linear",
+                  "Log-X",
+                  "Log-Y",
+                  "Log-XY"
+                ],
+                "hint": "Set linear or logarithmic scaling for active axes"
+              },
+              {
+                "key": "tics_out",
+                "value": "in",
+                "label": " Tics Direction",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "in",
+                  "out"
+                ],
+                "hint": "Direction of the tick marks relative to the plot border (inside/outside)"
+              }
+            ],
+            [
+              {
+                "key": "xtic_fmt",
+                "value": "%.2f",
+                "label": " X-Tick Format ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Format string for X-axis tick labels (e.g., %-g, %.2f)"
+              },
+              {
+                "key": "ytic_fmt",
+                "value": "%-g",
+                "label": " Y-Tick Format ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Format string for Y-axis tick labels (e.g., %-g, %.2f)"
+              },
+              {
+                "key": "mx_tics",
+                "value": "2",
+                "label": " X Minor Tics  ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of minor intervals between major X tics (1 to disable)"
+              },
+              {
+                "key": "my_tics",
+                "value": "2",
+                "label": " Y Minor Tics  ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of minor intervals between major Y tics (1 to disable)"
+              }
+            ],
+            [
+              {
+                "key": "x_min",
+                "value": "0",
+                "label": " X Min Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Minimum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "x_max",
+                "value": "0.4",
+                "label": " X Max Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Maximum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_min",
+                "value": "0",
+                "label": " Y Min Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Minimum boundary for Y axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_max",
+                "value": "2",
+                "label": " Y Max Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Maximum boundary for Y axis. Use '*' for auto-fit"
+              }
+            ],
+            [
+              {
+                "key": "title",
+                "value": "",
+                "label": " Main Title    ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Main title text of the plot. Empty indicates LaTeX caption mode."
+              },
+              {
+                "key": "key_columns",
+                "value": "2",
+                "label": " Legend Columns",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of columns to split the legend entries into"
+              },
+              {
+                "key": "key_pos",
+                "value": "top right",
+                "label": " Legend Pos    ",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "top right",
+                  "top left",
+                  "bottom right",
+                  "bottom left",
+                  "outside",
+                  "off"
+                ],
+                "hint": "Spatial anchoring zone for gnuplot key/legend panel"
+              }
+            ],
+            [
+              {
+                "key": "grid",
+                "value": "xtics ytics",
+                "label": " Grid Style    ",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "xtics ytics",
+                  "xtics ytics mxtics mytics",
+                  "off"
+                ],
+                "hint": "Toggle standard or high-density minor tics grid overlay"
+              },
+              {
+                "key": "zeroaxis",
+                "value": "off",
+                "label": " ZeroAxis (0,0)",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "off",
+                  "on"
+                ],
+                "hint": "Draw prominence lines for X=0 and Y=0 baselines"
+              }
+            ]
+          ],
+          "desc": "Margins, Origin \u0026 Object layout"
+        },
+        {
+          "keyword": "SOURCE",
+          "attributes": {
+            "enable_CD-等p排水三轴试验": "YES",
+            "enable_CU-等围压不排水三轴试验": "YES",
+            "enable_CU-等围压排水三轴试验": "YES",
+            "exp_CD-等p排水三轴试验": "CD-等p排水三轴试验",
+            "exp_CU-等围压不排水三轴试验": "CU-等围压不排水三轴试验",
+            "exp_CU-等围压排水三轴试验": "CU-等围压排水三轴试验",
+            "exp_enable_CD-等p排水三轴试验": "YES",
+            "exp_enable_CU-等围压不排水三轴试验": "YES",
+            "exp_enable_CU-等围压排水三轴试验": "YES",
+            "global_plot_mode": "ALL",
+            "plot_content_mode_CD-等p排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压不排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压排水三轴试验": "ALL",
+            "sim_CD-等p排水三轴试验": "Sim CD-等p排水三轴试验",
+            "sim_CU-等围压不排水三轴试验": "Sim CU-等围压不排水三轴试验",
+            "sim_CU-等围压排水三轴试验": "Sim CU-等围压排水三轴试验",
+            "sim_enable_CD-等p排水三轴试验": "YES",
+            "sim_enable_CU-等围压不排水三轴试验": "YES",
+            "sim_enable_CU-等围压排水三轴试验": "YES",
+            "x_col": "epsa",
+            "y_col": "eta"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "x_col",
+                "value": "0",
+                "label": " ⚙️ X Column Index",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "y_col",
+                "value": "8",
+                "label": " ⚙️ Y Column Index",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": " [dodgerblue::b]• CASE: CU-等围压排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": "   ┣━ 🔬 Exp. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压排水三轴试验",
+                "value": "Sim CU-等围压排水三轴试验",
+                "label": "   ┣━ 🧮 Sim. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": " [black::b]• CASE: CU-等围压不排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🔬 Exp. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压不排水三轴试验",
+                "value": "Sim CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🧮 Sim. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压不排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": " [black::b]• CASE: CD-等p排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": "   ┣━ 🔬 Exp. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CD-等p排水三轴试验",
+                "value": "Sim CD-等p排水三轴试验",
+                "label": "   ┣━ 🧮 Sim. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CD-等p排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ]
+          ],
+          "desc": ""
+        }
+      ],
+      "terminal": "",
+      "x_col_key": "",
+      "y_col_key": "",
+      "grid": false,
+      "x_range": "",
+      "y_range": "",
+      "custom_script": "",
+      "separator": "",
+      "show_legend": false,
+      "legend_pos": ""
+    },
+    {
+      "graph_title": "plot_260716_002",
+      "blocks": [
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "enable_CD-等p排水三轴试验": "YES",
+            "enable_CU-等围压不排水三轴试验": "YES",
+            "enable_CU-等围压排水三轴试验": "YES",
+            "exp_CD-等p排水三轴试验": "CD-等p排水三轴试验",
+            "exp_CU-等围压不排水三轴试验": "CU-等围压不排水三轴试验",
+            "exp_CU-等围压排水三轴试验": "CU-等围压排水三轴试验",
+            "exp_enable_CD-等p排水三轴试验": "YES",
+            "exp_enable_CU-等围压不排水三轴试验": "YES",
+            "exp_enable_CU-等围压排水三轴试验": "YES",
+            "global_plot_mode": "ALL",
+            "plot_content_mode_CD-等p排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压不排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压排水三轴试验": "ALL",
+            "sim_CD-等p排水三轴试验": "Sim CD-等p排水三轴试验",
+            "sim_CU-等围压不排水三轴试验": "Sim CU-等围压不排水三轴试验",
+            "sim_CU-等围压排水三轴试验": "Sim CU-等围压排水三轴试验",
+            "sim_enable_CD-等p排水三轴试验": "YES",
+            "sim_enable_CU-等围压不排水三轴试验": "YES",
+            "sim_enable_CU-等围压排水三轴试验": "YES",
+            "x_col": "6",
+            "y_col": "7"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "x_col",
+                "value": "6",
+                "label": " [yellow::b]⌖ X-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "y_col",
+                "value": "7",
+                "label": " [yellow::b]⌖ Y-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "global_plot_mode",
+                "value": "ALL",
+                "label": " [yellow::b]⌖ 数据切换模式?[-] ",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "ALL",
+                  "EXP_ONLY",
+                  "SIM_ONLY"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": " [black::b]• CASE: CU-等围压排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压排水三轴试验",
+                "value": "Sim CU-等围压排水三轴试验",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": " [black::b]• CASE: CU-等围压不排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压不排水三轴试验",
+                "value": "Sim CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压不排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": " [dodgerblue::b]• CASE: CD-等p排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CD-等p排水三轴试验",
+                "value": "Sim CD-等p排水三轴试验",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CD-等p排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ]
+          ],
+          "desc": "Gnuplot Data alignment \u0026 Column mapping"
+        },
+        {
+          "keyword": "FIGURE",
+          "attributes": {
+            "FONT_FACE": "Times-New-Roman",
+            "FONT_SIZE": "14",
+            "OUTPUT": "plot_res.pdf",
+            "TERM": "pdfcairo"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "canvas_w",
+                "value": "5.00in",
+                "label": " Canvas Width",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Horizontal length of the rendering viewport"
+              },
+              {
+                "key": "canvas_h",
+                "value": "3.00in",
+                "label": " Canvas Height",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Vertical length of the rendering viewport"
+              },
+              {
+                "key": "enhanced",
+                "value": "enhanced",
+                "label": " Enhanced Text Mode",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "enhanced",
+                  "noenhanced"
+                ],
+                "hint": "Enable formatting for Greek letters, symbols, and sub/superscripts"
+              },
+              {
+                "key": "palette",
+                "value": "Legacy-RGB",
+                "label": " Color Palette",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "Elsevier-Classic",
+                  "Mono-Print",
+                  "Stress-Gradient",
+                  "Nature-Geology",
+                  "Colorblind-Friendly",
+                  "Geotechnique-Classic",
+                  "Legacy-RGB"
+                ],
+                "hint": "Standardized academic color schemes and line styles"
+              },
+              {
+                "key": "color",
+                "value": "color",
+                "label": " Line Color Mode",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "color",
+                  "mono"
+                ],
+                "hint": "Switch between chromatic spectrum and pure monochrome lines"
+              },
+              {
+                "key": "background",
+                "value": "white",
+                "label": " Background Color",
+                "unit": "rgb",
+                "fixed": true,
+                "options": [
+                  "white",
+                  "transparent",
+                  "gray95",
+                  "gray90"
+                ],
+                "hint": "Canvas background color specification"
+              },
+              {
+                "key": "plot_gradient",
+                "value": "Cool-Gray",
+                "label": " Plot Area Gradient",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "None",
+                  "Cool-Gray",
+                  "Soft-Blue",
+                  "Warm-Sand",
+                  "Eco-Green"
+                ],
+                "hint": "Gradient background inside the plot border (graph area)"
+              }
+            ]
+          ],
+          "desc": "Terminal settings \u0026 Canvas dimensions"
+        },
+        {
+          "keyword": "AXES",
+          "attributes": {
+            "AXIS_LANG": "ZH",
+            "GRID": "xtics ytics",
+            "KEY_COLUMNS": "2",
+            "KEY_POS": "top left",
+            "LOGSCALE": "none",
+            "ZEROAXIS": "off"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "title",
+                "value": "",
+                "label": "Main Title",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Main title text of the plot. Empty indicates LaTeX caption mode."
+              },
+              {
+                "key": "subtitle",
+                "value": "",
+                "label": "Subtitle",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Secondary subtitle text displayed under the main title."
+              }
+            ],
+            [
+              {
+                "key": "key_columns",
+                "value": "2",
+                "label": "Legend Columns",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of columns to split the legend entries into"
+              },
+              {
+                "key": "key_pos",
+                "value": "top left",
+                "label": "Legend Position",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "top right",
+                  "top left",
+                  "bottom right",
+                  "bottom left",
+                  "outside",
+                  "off"
+                ],
+                "hint": "Spatial anchoring zone for gnuplot key/legend panel"
+              }
+            ],
+            [
+              {
+                "key": "grid",
+                "value": "xtics ytics",
+                "label": "Grid Line Style",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "xtics ytics",
+                  "xtics ytics mxtics mytics",
+                  "off"
+                ],
+                "hint": "Toggle standard or high-density minor tics grid overlay"
+              },
+              {
+                "key": "zeroaxis",
+                "value": "off",
+                "label": "ZeroAxis (on/off)",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "off",
+                  "on"
+                ],
+                "hint": "Draw prominence lines for X=0 and Y=0 baselines"
+              }
+            ],
+            [
+              {
+                "key": "logscale",
+                "value": "none",
+                "label": "LogScale (x/y/xy)",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "none",
+                  "x",
+                  "y",
+                  "xy"
+                ],
+                "hint": "Transform specific rendering dimension into logarithmic space"
+              },
+              {
+                "key": "axis_lang",
+                "value": "ZH",
+                "label": "Language (ZH/EN)",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "ZH",
+                  "EN"
+                ],
+                "hint": "Toggle dynamic axis dialect translation between English and Chinese"
+              }
+            ]
+          ],
+          "desc": "Subplot \u0026 Graph title configurations"
+        },
+        {
+          "keyword": "ARTIST",
+          "attributes": {
+            "EXP_STYLE": "points",
+            "LINE_TYPE": "1",
+            "LINE_WIDTH": "4.0",
+            "MARK_LINE_WIDTH": "1.5",
+            "MARK_SIZE": "0.8",
+            "MARK_TYPE": "auto",
+            "SMOOTH": "none",
+            "STYLE": "points",
+            "exp_skip_CD-等p排水三轴试验": "1",
+            "exp_skip_CU-等围压不排水三轴试验": "1",
+            "exp_skip_CU-等围压排水三轴试验": "1",
+            "exp_x_CD-等p排水三轴试验": "1.0",
+            "exp_x_CU-等围压不排水三轴试验": "1.0",
+            "exp_x_CU-等围压排水三轴试验": "1.0",
+            "exp_y_CD-等p排水三轴试验": "1.0",
+            "exp_y_CU-等围压不排水三轴试验": "1.0",
+            "exp_y_CU-等围压排水三轴试验": "1.0",
+            "sim_x_CD-等p排水三轴试验": "1.0",
+            "sim_x_CU-等围压不排水三轴试验": "1.0",
+            "sim_x_CU-等围压排水三轴试验": "1.0",
+            "sim_y_CD-等p排水三轴试验": "1.0",
+            "sim_y_CU-等围压不排水三轴试验": "1.0",
+            "sim_y_CU-等围压排水三轴试验": "1.0"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "case_header_CU-等围压排水三轴试验",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: CU-等围压排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_CU-等围压排水三轴试验",
+                "value": "1",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_CU-等围压不排水三轴试验",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: CU-等围压不排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_CU-等围压不排水三轴试验",
+                "value": "1",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_CD-等p排水三轴试验",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: CD-等p排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_CD-等p排水三轴试验",
+                "value": "1",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Line styles, Point types \u0026 Colors"
+        },
+        {
+          "keyword": "AXIS",
+          "attributes": {
+            "AXIS_LANG": "EN",
+            "FORMAT_X": "%.2f",
+            "FORMAT_Y": "%-g",
+            "RANGE_MODE": "Fixed",
+            "SCALE": "Linear",
+            "TICS_OUT": "in",
+            "XTICS_AUTO_STEP": "0.100000",
+            "XTICS_NUM": "4",
+            "X_LABEL_VAL": "Mean effective stress {/:Italic p} / kPa",
+            "Y_LABEL_VAL": "Deviatoric stress {/:Italic q} / kPa"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "xtic_fmt",
+                "value": "%.2f",
+                "label": "[blue][-] X-Tick Fmt ",
+                "unit": "",
+                "fixed": false,
+                "hint": "Format string for X-axis tick labels (e.g., %g, %.2f)"
+              },
+              {
+                "key": "ytic_fmt",
+                "value": "%-g",
+                "label": "[blue][-] Y-Tick Fmt ",
+                "unit": "",
+                "fixed": false,
+                "hint": "Format string for Y-axis tick labels (e.g., %g, %.2f)"
+              },
+              {
+                "key": "mx_tics",
+                "value": "1",
+                "label": "[gray][-] X Minor Tics",
+                "unit": "",
+                "fixed": false,
+                "hint": "Number of minor intervals between major X tics"
+              },
+              {
+                "key": "my_tics",
+                "value": "1",
+                "label": "[gray][-] Y Minor Tics",
+                "unit": "",
+                "fixed": false,
+                "hint": "Number of minor intervals between major Y tics"
+              }
+            ],
+            [
+              {
+                "key": "x_min",
+                "value": "0",
+                "label": "[yellow][-] X Min (Fixed)",
+                "unit": "",
+                "fixed": false,
+                "hint": "Minimum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "x_max",
+                "value": "200",
+                "label": "[yellow][-] X Max (Fixed)",
+                "unit": "",
+                "fixed": false,
+                "hint": "Maximum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_min",
+                "value": "0",
+                "label": "[yellow][-] Y Min (Fixed)",
+                "unit": "",
+                "fixed": false,
+                "hint": "Minimum boundary for Y axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_max",
+                "value": "300",
+                "label": "[yellow][-] Y Max (Fixed)",
+                "unit": "",
+                "fixed": false,
+                "hint": "Maximum boundary for Y axis. Use '*' for auto-fit"
+              }
+            ]
+          ],
+          "desc": "Tics, Labels \u0026 Range settings"
+        },
+        {
+          "keyword": "LAYOUT",
+          "attributes": {
+            "AXIS_LANG": "EN",
+            "FORMAT_X": "%.2f",
+            "FORMAT_Y": "%-g",
+            "GRID": "xtics ytics",
+            "KEY_COLUMNS": "2",
+            "KEY_POS": "top right",
+            "RANGE_MODE": "Auto-fit",
+            "SCALE": "Linear",
+            "TICS_OUT": "in",
+            "XTICS_AUTO_STEP": "0.100000",
+            "XTICS_NUM": "4",
+            "X_LABEL_VAL": "Axial strain {/Symbol e}_{a} / %",
+            "Y_LABEL_VAL": "Pore water pressure {/:Italic u} / kPa",
+            "ZEROAXIS": "off"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "axis_lang",
+                "value": "EN",
+                "label": " Language     ",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "EN",
+                  "ZH"
+                ],
+                "hint": "Switch axis labels and tutorial language (English / Chinese)"
+              },
+              {
+                "key": "scale",
+                "value": "Linear",
+                "label": " Coordinate   ",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "Linear",
+                  "Log-X",
+                  "Log-Y",
+                  "Log-XY"
+                ],
+                "hint": "Set linear or logarithmic scaling for active axes"
+              },
+              {
+                "key": "tics_out",
+                "value": "in",
+                "label": " Tics Direction",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "in",
+                  "out"
+                ],
+                "hint": "Direction of the tick marks relative to the plot border (inside/outside)"
+              }
+            ],
+            [
+              {
+                "key": "xtic_fmt",
+                "value": "%.2f",
+                "label": " X-Tick Format ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Format string for X-axis tick labels (e.g., %-g, %.2f)"
+              },
+              {
+                "key": "ytic_fmt",
+                "value": "%-g",
+                "label": " Y-Tick Format ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Format string for Y-axis tick labels (e.g., %-g, %.2f)"
+              },
+              {
+                "key": "mx_tics",
+                "value": "3",
+                "label": " X Minor Tics  ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of minor intervals between major X tics (1 to disable)"
+              },
+              {
+                "key": "my_tics",
+                "value": "3",
+                "label": " Y Minor Tics  ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of minor intervals between major Y tics (1 to disable)"
+              }
+            ],
+            [
+              {
+                "key": "x_min",
+                "value": "0",
+                "label": " X Min Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Minimum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "x_max",
+                "value": "0.4",
+                "label": " X Max Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Maximum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_min",
+                "value": "-50",
+                "label": " Y Min Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Minimum boundary for Y axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_max",
+                "value": "100",
+                "label": " Y Max Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Maximum boundary for Y axis. Use '*' for auto-fit"
+              }
+            ],
+            [
+              {
+                "key": "title",
+                "value": "",
+                "label": " Main Title    ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Main title text of the plot. Empty indicates LaTeX caption mode."
+              },
+              {
+                "key": "key_columns",
+                "value": "2",
+                "label": " Legend Columns",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of columns to split the legend entries into"
+              },
+              {
+                "key": "key_pos",
+                "value": "top right",
+                "label": " Legend Pos    ",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "top right",
+                  "top left",
+                  "bottom right",
+                  "bottom left",
+                  "outside",
+                  "off"
+                ],
+                "hint": "Spatial anchoring zone for gnuplot key/legend panel"
+              }
+            ],
+            [
+              {
+                "key": "grid",
+                "value": "xtics ytics",
+                "label": " Grid Style    ",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "xtics ytics",
+                  "xtics ytics mxtics mytics",
+                  "off"
+                ],
+                "hint": "Toggle standard or high-density minor tics grid overlay"
+              },
+              {
+                "key": "zeroaxis",
+                "value": "off",
+                "label": " ZeroAxis (0,0)",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "off",
+                  "on"
+                ],
+                "hint": "Draw prominence lines for X=0 and Y=0 baselines"
+              }
+            ]
+          ],
+          "desc": "Margins, Origin \u0026 Object layout"
+        },
+        {
+          "keyword": "SOURCE",
+          "attributes": {
+            "enable_CD-等p排水三轴试验": "YES",
+            "enable_CU-等围压不排水三轴试验": "YES",
+            "enable_CU-等围压排水三轴试验": "YES",
+            "exp_CD-等p排水三轴试验": "CD-等p排水三轴试验",
+            "exp_CU-等围压不排水三轴试验": "CU-等围压不排水三轴试验",
+            "exp_CU-等围压排水三轴试验": "CU-等围压排水三轴试验",
+            "exp_enable_CD-等p排水三轴试验": "YES",
+            "exp_enable_CU-等围压不排水三轴试验": "YES",
+            "exp_enable_CU-等围压排水三轴试验": "YES",
+            "global_plot_mode": "ALL",
+            "plot_content_mode_CD-等p排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压不排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压排水三轴试验": "ALL",
+            "sim_CD-等p排水三轴试验": "Sim CD-等p排水三轴试验",
+            "sim_CU-等围压不排水三轴试验": "Sim CU-等围压不排水三轴试验",
+            "sim_CU-等围压排水三轴试验": "Sim CU-等围压排水三轴试验",
+            "sim_enable_CD-等p排水三轴试验": "YES",
+            "sim_enable_CU-等围压不排水三轴试验": "YES",
+            "sim_enable_CU-等围压排水三轴试验": "YES",
+            "x_col": "epsa",
+            "y_col": "pore"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "x_col",
+                "value": "0",
+                "label": " ⚙️ X Column Index",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "y_col",
+                "value": "10",
+                "label": " ⚙️ Y Column Index",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": " [dodgerblue::b]• CASE: CU-等围压排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": "   ┣━ 🔬 Exp. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压排水三轴试验",
+                "value": "Sim CU-等围压排水三轴试验",
+                "label": "   ┣━ 🧮 Sim. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": " [black::b]• CASE: CU-等围压不排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🔬 Exp. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压不排水三轴试验",
+                "value": "Sim CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🧮 Sim. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压不排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": " [black::b]• CASE: CD-等p排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": "   ┣━ 🔬 Exp. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CD-等p排水三轴试验",
+                "value": "Sim CD-等p排水三轴试验",
+                "label": "   ┣━ 🧮 Sim. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CD-等p排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ]
+          ],
+          "desc": ""
+        }
+      ],
+      "terminal": "",
+      "x_col_key": "",
+      "y_col_key": "",
+      "grid": false,
+      "x_range": "",
+      "y_range": "",
+      "custom_script": "",
+      "separator": "",
+      "show_legend": false,
+      "legend_pos": ""
+    },
+    {
+      "graph_title": "plot_260716_003",
+      "blocks": [
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "enable_CD-等p排水三轴试验": "YES",
+            "enable_CU-等围压不排水三轴试验": "YES",
+            "enable_CU-等围压排水三轴试验": "YES",
+            "exp_CD-等p排水三轴试验": "CD-等p排水三轴试验",
+            "exp_CU-等围压不排水三轴试验": "CU-等围压不排水三轴试验",
+            "exp_CU-等围压排水三轴试验": "CU-等围压排水三轴试验",
+            "exp_enable_CD-等p排水三轴试验": "YES",
+            "exp_enable_CU-等围压不排水三轴试验": "YES",
+            "exp_enable_CU-等围压排水三轴试验": "YES",
+            "global_plot_mode": "ALL",
+            "plot_content_mode_CD-等p排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压不排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压排水三轴试验": "ALL",
+            "sim_CD-等p排水三轴试验": "Sim CD-等p排水三轴试验",
+            "sim_CU-等围压不排水三轴试验": "Sim CU-等围压不排水三轴试验",
+            "sim_CU-等围压排水三轴试验": "Sim CU-等围压排水三轴试验",
+            "sim_enable_CD-等p排水三轴试验": "YES",
+            "sim_enable_CU-等围压不排水三轴试验": "YES",
+            "sim_enable_CU-等围压排水三轴试验": "YES",
+            "x_col": "0",
+            "y_col": "10"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "x_col",
+                "value": "0",
+                "label": " [yellow::b]⌖ X-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "y_col",
+                "value": "10",
+                "label": " [yellow::b]⌖ Y-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "global_plot_mode",
+                "value": "ALL",
+                "label": " [yellow::b]⌖ 数据切换模式?[-] ",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "ALL",
+                  "EXP_ONLY",
+                  "SIM_ONLY"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": " [black::b]• CASE: CU-等围压排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压排水三轴试验",
+                "value": "Sim CU-等围压排水三轴试验",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": " [black::b]• CASE: CU-等围压不排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压不排水三轴试验",
+                "value": "Sim CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压不排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": " [dodgerblue::b]• CASE: CD-等p排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CD-等p排水三轴试验",
+                "value": "Sim CD-等p排水三轴试验",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CD-等p排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ]
+          ],
+          "desc": "Gnuplot Data alignment \u0026 Column mapping"
+        },
+        {
+          "keyword": "FIGURE",
+          "attributes": {
+            "FONT_FACE": "Times-New-Roman",
+            "FONT_SIZE": "14",
+            "OUTPUT": "plot_res.pdf",
+            "TERM": "pdfcairo"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "canvas_w",
+                "value": "5.00in",
+                "label": " Canvas Width",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Horizontal length of the rendering viewport"
+              },
+              {
+                "key": "canvas_h",
+                "value": "3.00in",
+                "label": " Canvas Height",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Vertical length of the rendering viewport"
+              },
+              {
+                "key": "enhanced",
+                "value": "enhanced",
+                "label": " Enhanced Text Mode",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "enhanced",
+                  "noenhanced"
+                ],
+                "hint": "Enable formatting for Greek letters, symbols, and sub/superscripts"
+              },
+              {
+                "key": "palette",
+                "value": "Legacy-RGB",
+                "label": " Color Palette",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "Elsevier-Classic",
+                  "Mono-Print",
+                  "Stress-Gradient",
+                  "Nature-Geology",
+                  "Colorblind-Friendly",
+                  "Geotechnique-Classic",
+                  "Legacy-RGB"
+                ],
+                "hint": "Standardized academic color schemes and line styles"
+              },
+              {
+                "key": "color",
+                "value": "color",
+                "label": " Line Color Mode",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "color",
+                  "mono"
+                ],
+                "hint": "Switch between chromatic spectrum and pure monochrome lines"
+              },
+              {
+                "key": "background",
+                "value": "white",
+                "label": " Background Color",
+                "unit": "rgb",
+                "fixed": true,
+                "options": [
+                  "white",
+                  "transparent",
+                  "gray95",
+                  "gray90"
+                ],
+                "hint": "Canvas background color specification"
+              },
+              {
+                "key": "plot_gradient",
+                "value": "Cool-Gray",
+                "label": " Plot Area Gradient",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "None",
+                  "Cool-Gray",
+                  "Soft-Blue",
+                  "Warm-Sand",
+                  "Eco-Green"
+                ],
+                "hint": "Gradient background inside the plot border (graph area)"
+              }
+            ]
+          ],
+          "desc": "Terminal settings \u0026 Canvas dimensions"
+        },
+        {
+          "keyword": "AXES",
+          "attributes": {
+            "AXIS_LANG": "ZH",
+            "GRID": "xtics ytics",
+            "KEY_COLUMNS": "2",
+            "KEY_POS": "top right",
+            "LOGSCALE": "none",
+            "ZEROAXIS": "off"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "title",
+                "value": "",
+                "label": "Main Title",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Main title text of the plot. Empty indicates LaTeX caption mode."
+              },
+              {
+                "key": "subtitle",
+                "value": "",
+                "label": "Subtitle",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Secondary subtitle text displayed under the main title."
+              }
+            ],
+            [
+              {
+                "key": "key_columns",
+                "value": "2",
+                "label": "Legend Columns",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of columns to split the legend entries into"
+              },
+              {
+                "key": "key_pos",
+                "value": "top right",
+                "label": "Legend Position",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "top right",
+                  "top left",
+                  "bottom right",
+                  "bottom left",
+                  "outside",
+                  "off"
+                ],
+                "hint": "Spatial anchoring zone for gnuplot key/legend panel"
+              }
+            ],
+            [
+              {
+                "key": "grid",
+                "value": "xtics ytics",
+                "label": "Grid Line Style",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "xtics ytics",
+                  "xtics ytics mxtics mytics",
+                  "off"
+                ],
+                "hint": "Toggle standard or high-density minor tics grid overlay"
+              },
+              {
+                "key": "zeroaxis",
+                "value": "off",
+                "label": "ZeroAxis (on/off)",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "off",
+                  "on"
+                ],
+                "hint": "Draw prominence lines for X=0 and Y=0 baselines"
+              }
+            ],
+            [
+              {
+                "key": "logscale",
+                "value": "none",
+                "label": "LogScale (x/y/xy)",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "none",
+                  "x",
+                  "y",
+                  "xy"
+                ],
+                "hint": "Transform specific rendering dimension into logarithmic space"
+              },
+              {
+                "key": "axis_lang",
+                "value": "ZH",
+                "label": "Language (ZH/EN)",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "ZH",
+                  "EN"
+                ],
+                "hint": "Toggle dynamic axis dialect translation between English and Chinese"
+              }
+            ]
+          ],
+          "desc": "Subplot \u0026 Graph title configurations"
+        },
+        {
+          "keyword": "ARTIST",
+          "attributes": {
+            "EXP_STYLE": "points",
+            "LINE_TYPE": "1",
+            "LINE_WIDTH": "4.0",
+            "MARK_LINE_WIDTH": "1.5",
+            "MARK_SIZE": "0.8",
+            "MARK_TYPE": "auto",
+            "SMOOTH": "none",
+            "STYLE": "points",
+            "exp_skip_CD-等p排水三轴试验": "1",
+            "exp_skip_CU-等围压不排水三轴试验": "1",
+            "exp_skip_CU-等围压排水三轴试验": "1",
+            "exp_x_CD-等p排水三轴试验": "1.0",
+            "exp_x_CU-等围压不排水三轴试验": "1.0",
+            "exp_x_CU-等围压排水三轴试验": "1.0",
+            "exp_y_CD-等p排水三轴试验": "1.0",
+            "exp_y_CU-等围压不排水三轴试验": "1.0",
+            "exp_y_CU-等围压排水三轴试验": "1.0",
+            "sim_x_CD-等p排水三轴试验": "1.0",
+            "sim_x_CU-等围压不排水三轴试验": "1.0",
+            "sim_x_CU-等围压排水三轴试验": "1.0",
+            "sim_y_CD-等p排水三轴试验": "1.0",
+            "sim_y_CU-等围压不排水三轴试验": "1.0",
+            "sim_y_CU-等围压排水三轴试验": "1.0"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "case_header_CU-等围压排水三轴试验",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: CU-等围压排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_CU-等围压排水三轴试验",
+                "value": "1",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_CU-等围压不排水三轴试验",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: CU-等围压不排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_CU-等围压不排水三轴试验",
+                "value": "1",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_CD-等p排水三轴试验",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: CD-等p排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_CD-等p排水三轴试验",
+                "value": "1",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Line styles, Point types \u0026 Colors"
+        },
+        {
+          "keyword": "AXIS",
+          "attributes": {
+            "AXIS_LANG": "EN",
+            "FORMAT_X": "%.2f",
+            "FORMAT_Y": "%-g",
+            "RANGE_MODE": "Fixed",
+            "SCALE": "Linear",
+            "TICS_OUT": "in",
+            "XTICS_AUTO_STEP": "0.100000",
+            "XTICS_NUM": "4",
+            "X_LABEL_VAL": "Axial strain {/Symbol e}_{a} / %",
+            "Y_LABEL_VAL": "Pore water pressure {/:Italic u} / kPa"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "xtic_fmt",
+                "value": "%.2f",
+                "label": "[blue][-] X-Tick Fmt ",
+                "unit": "",
+                "fixed": false,
+                "hint": "Format string for X-axis tick labels (e.g., %g, %.2f)"
+              },
+              {
+                "key": "ytic_fmt",
+                "value": "%-g",
+                "label": "[blue][-] Y-Tick Fmt ",
+                "unit": "",
+                "fixed": false,
+                "hint": "Format string for Y-axis tick labels (e.g., %g, %.2f)"
+              },
+              {
+                "key": "mx_tics",
+                "value": "1",
+                "label": "[gray][-] X Minor Tics",
+                "unit": "",
+                "fixed": false,
+                "hint": "Number of minor intervals between major X tics"
+              },
+              {
+                "key": "my_tics",
+                "value": "1",
+                "label": "[gray][-] Y Minor Tics",
+                "unit": "",
+                "fixed": false,
+                "hint": "Number of minor intervals between major Y tics"
+              }
+            ],
+            [
+              {
+                "key": "x_min",
+                "value": "0",
+                "label": "[yellow][-] X Min (Fixed)",
+                "unit": "",
+                "fixed": false,
+                "hint": "Minimum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "x_max",
+                "value": "0.4",
+                "label": "[yellow][-] X Max (Fixed)",
+                "unit": "",
+                "fixed": false,
+                "hint": "Maximum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_min",
+                "value": "-50",
+                "label": "[yellow][-] Y Min (Fixed)",
+                "unit": "",
+                "fixed": false,
+                "hint": "Minimum boundary for Y axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_max",
+                "value": "100",
+                "label": "[yellow][-] Y Max (Fixed)",
+                "unit": "",
+                "fixed": false,
+                "hint": "Maximum boundary for Y axis. Use '*' for auto-fit"
+              }
+            ]
+          ],
+          "desc": "Tics, Labels \u0026 Range settings"
+        },
+        {
+          "keyword": "LAYOUT",
+          "attributes": {
+            "AXIS_LANG": "ZH",
+            "FORMAT_X": "%-g",
+            "FORMAT_Y": "%-g",
+            "GRID": "xtics ytics",
+            "KEY_COLUMNS": "2",
+            "KEY_POS": "top right",
+            "RANGE_MODE": "Auto-fit",
+            "SCALE": "Linear",
+            "TICS_OUT": "in",
+            "XTICS_AUTO_STEP": "50.000000",
+            "XTICS_NUM": "4",
+            "X_LABEL_IS_USER_MODIFIED": "false",
+            "X_LABEL_VAL": "平均有效应力 {/:Italic p} / kPa",
+            "Y_LABEL_IS_USER_MODIFIED": "false",
+            "Y_LABEL_VAL": "偏应力 {/:Italic q} / kPa",
+            "ZEROAXIS": "off"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "axis_lang",
+                "value": "ZH",
+                "label": " Language     ",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "EN",
+                  "ZH"
+                ],
+                "hint": "Switch axis labels and tutorial language (English / Chinese)"
+              },
+              {
+                "key": "scale",
+                "value": "Linear",
+                "label": " Coordinate   ",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "Linear",
+                  "Log-X",
+                  "Log-Y",
+                  "Log-XY"
+                ],
+                "hint": "Set linear or logarithmic scaling for active axes"
+              },
+              {
+                "key": "tics_out",
+                "value": "in",
+                "label": " Tics Direction",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "in",
+                  "out"
+                ],
+                "hint": "Direction of the tick marks relative to the plot border (inside/outside)"
+              }
+            ],
+            [
+              {
+                "key": "xtic_fmt",
+                "value": "%-g",
+                "label": " X-Tick Format ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Format string for X-axis tick labels (e.g., %-g, %.2f)"
+              },
+              {
+                "key": "ytic_fmt",
+                "value": "%-g",
+                "label": " Y-Tick Format ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Format string for Y-axis tick labels (e.g., %-g, %.2f)"
+              },
+              {
+                "key": "mx_tics",
+                "value": "2",
+                "label": " X Minor Tics  ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of minor intervals between major X tics (1 to disable)"
+              },
+              {
+                "key": "my_tics",
+                "value": "2",
+                "label": " Y Minor Tics  ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of minor intervals between major Y tics (1 to disable)"
+              }
+            ],
+            [
+              {
+                "key": "x_min",
+                "value": "0",
+                "label": " X Min Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Minimum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "x_max",
+                "value": "200",
+                "label": " X Max Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Maximum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_min",
+                "value": "0",
+                "label": " Y Min Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Minimum boundary for Y axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_max",
+                "value": "300",
+                "label": " Y Max Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Maximum boundary for Y axis. Use '*' for auto-fit"
+              }
+            ],
+            [
+              {
+                "key": "title",
+                "value": "",
+                "label": " Main Title    ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Main title text of the plot. Empty indicates LaTeX caption mode."
+              },
+              {
+                "key": "key_columns",
+                "value": "2",
+                "label": " Legend Columns",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of columns to split the legend entries into"
+              },
+              {
+                "key": "key_pos",
+                "value": "top right",
+                "label": " Legend Pos    ",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "top right",
+                  "top left",
+                  "bottom right",
+                  "bottom left",
+                  "outside",
+                  "off"
+                ],
+                "hint": "Spatial anchoring zone for gnuplot key/legend panel"
+              }
+            ],
+            [
+              {
+                "key": "grid",
+                "value": "xtics ytics",
+                "label": " Grid Style    ",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "xtics ytics",
+                  "xtics ytics mxtics mytics",
+                  "off"
+                ],
+                "hint": "Toggle standard or high-density minor tics grid overlay"
+              },
+              {
+                "key": "zeroaxis",
+                "value": "off",
+                "label": " ZeroAxis (0,0)",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "off",
+                  "on"
+                ],
+                "hint": "Draw prominence lines for X=0 and Y=0 baselines"
+              }
+            ]
+          ],
+          "desc": "Margins, Origin \u0026 Object layout"
+        },
+        {
+          "keyword": "SOURCE",
+          "attributes": {
+            "enable_CD-等p排水三轴试验": "YES",
+            "enable_CU-等围压不排水三轴试验": "YES",
+            "enable_CU-等围压排水三轴试验": "YES",
+            "exp_CD-等p排水三轴试验": "CD-等p排水三轴试验",
+            "exp_CU-等围压不排水三轴试验": "CU-等围压不排水三轴试验",
+            "exp_CU-等围压排水三轴试验": "CU-等围压排水三轴试验",
+            "exp_enable_CD-等p排水三轴试验": "YES",
+            "exp_enable_CU-等围压不排水三轴试验": "YES",
+            "exp_enable_CU-等围压排水三轴试验": "YES",
+            "global_plot_mode": "ALL",
+            "plot_content_mode_CD-等p排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压不排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压排水三轴试验": "ALL",
+            "sim_CD-等p排水三轴试验": "Sim CD-等p排水三轴试验",
+            "sim_CU-等围压不排水三轴试验": "Sim CU-等围压不排水三轴试验",
+            "sim_CU-等围压排水三轴试验": "Sim CU-等围压排水三轴试验",
+            "sim_enable_CD-等p排水三轴试验": "YES",
+            "sim_enable_CU-等围压不排水三轴试验": "YES",
+            "sim_enable_CU-等围压排水三轴试验": "YES",
+            "x_col": "p",
+            "y_col": "q"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "x_col",
+                "value": "6",
+                "label": " ⚙️ X Column Index",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "y_col",
+                "value": "7",
+                "label": " ⚙️ Y Column Index",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": " [dodgerblue::b]• CASE: CU-等围压排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": "   ┣━ 🔬 Exp. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压排水三轴试验",
+                "value": "Sim CU-等围压排水三轴试验",
+                "label": "   ┣━ 🧮 Sim. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": " [black::b]• CASE: CU-等围压不排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🔬 Exp. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压不排水三轴试验",
+                "value": "Sim CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🧮 Sim. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压不排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": " [black::b]• CASE: CD-等p排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": "   ┣━ 🔬 Exp. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CD-等p排水三轴试验",
+                "value": "Sim CD-等p排水三轴试验",
+                "label": "   ┣━ 🧮 Sim. Legend",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CD-等p排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ]
+          ],
+          "desc": ""
+        }
+      ],
+      "terminal": "",
+      "x_col_key": "",
+      "y_col_key": "",
+      "grid": false,
+      "x_range": "",
+      "y_range": "",
+      "custom_script": "",
+      "separator": "",
+      "show_legend": false,
+      "legend_pos": ""
+    },
+    {
+      "graph_title": "plot_260716_004",
+      "blocks": [
+        {
+          "keyword": "DATA",
+          "attributes": {},
+          "data_rows": [],
+          "desc": "Gnuplot Data alignment \u0026 Column mapping"
+        },
+        {
+          "keyword": "FIGURE",
+          "attributes": {
+            "FONT_FACE": "Times-New-Roman",
+            "FONT_SIZE": "14",
+            "OUTPUT": "plot_res.pdf",
+            "TERM": "pdfcairo"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "canvas_w",
+                "value": "5.00in",
+                "label": " Canvas Width",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Horizontal length of the rendering viewport"
+              },
+              {
+                "key": "canvas_h",
+                "value": "3.00in",
+                "label": " Canvas Height",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Vertical length of the rendering viewport"
+              },
+              {
+                "key": "enhanced",
+                "value": "enhanced",
+                "label": " Enhanced Text Mode",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "enhanced",
+                  "noenhanced"
+                ],
+                "hint": "Enable formatting for Greek letters, symbols, and sub/superscripts"
+              },
+              {
+                "key": "palette",
+                "value": "Legacy-RGB",
+                "label": " Color Palette",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "Elsevier-Classic",
+                  "Mono-Print",
+                  "Stress-Gradient",
+                  "Nature-Geology",
+                  "Colorblind-Friendly",
+                  "Geotechnique-Classic",
+                  "Legacy-RGB"
+                ],
+                "hint": "Standardized academic color schemes and line styles"
+              },
+              {
+                "key": "color",
+                "value": "color",
+                "label": " Line Color Mode",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "color",
+                  "mono"
+                ],
+                "hint": "Switch between chromatic spectrum and pure monochrome lines"
+              },
+              {
+                "key": "background",
+                "value": "white",
+                "label": " Background Color",
+                "unit": "rgb",
+                "fixed": true,
+                "options": [
+                  "white",
+                  "transparent",
+                  "gray95",
+                  "gray90"
+                ],
+                "hint": "Canvas background color specification"
+              },
+              {
+                "key": "plot_gradient",
+                "value": "Cool-Gray",
+                "label": " Plot Area Gradient",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "None",
+                  "Cool-Gray",
+                  "Soft-Blue",
+                  "Warm-Sand",
+                  "Eco-Green"
+                ],
+                "hint": "Gradient background inside the plot border (graph area)"
+              }
+            ]
+          ],
+          "desc": "Terminal settings \u0026 Canvas dimensions"
+        },
+        {
+          "keyword": "AXES",
+          "attributes": {},
+          "data_rows": [],
+          "desc": "Subplot \u0026 Graph title configurations"
+        },
+        {
+          "keyword": "ARTIST",
+          "attributes": {
+            "LINE_TYPE": "1",
+            "LINE_WIDTH": "4.0",
+            "MARK_SIZE": "0.8",
+            "MARK_TYPE": "auto",
+            "SMOOTH": "none",
+            "STYLE": "points",
+            "exp_skip_CD-等p排水三轴试验": "1",
+            "exp_skip_CU-等围压不排水三轴试验": "1",
+            "exp_skip_CU-等围压排水三轴试验": "1",
+            "exp_x_CD-等p排水三轴试验": "1.0",
+            "exp_x_CU-等围压不排水三轴试验": "1.0",
+            "exp_x_CU-等围压排水三轴试验": "1.0",
+            "exp_y_CD-等p排水三轴试验": "1.0",
+            "exp_y_CU-等围压不排水三轴试验": "1.0",
+            "exp_y_CU-等围压排水三轴试验": "1.0",
+            "sim_x_CD-等p排水三轴试验": "100",
+            "sim_x_CU-等围压不排水三轴试验": "100",
+            "sim_x_CU-等围压排水三轴试验": "100",
+            "sim_y_CD-等p排水三轴试验": "100",
+            "sim_y_CU-等围压不排水三轴试验": "100",
+            "sim_y_CU-等围压排水三轴试验": "100"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "case_header_CU-等围压排水三轴试验",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: CU-等围压排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_CU-等围压排水三轴试验",
+                "value": "1",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_CU-等围压排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_CU-等围压排水三轴试验",
+                "value": "100",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_CU-等围压排水三轴试验",
+                "value": "100",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_CU-等围压不排水三轴试验",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: CU-等围压不排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_CU-等围压不排水三轴试验",
+                "value": "1",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_CU-等围压不排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_CU-等围压不排水三轴试验",
+                "value": "100",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_CU-等围压不排水三轴试验",
+                "value": "100",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_CD-等p排水三轴试验",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: CD-等p排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_CD-等p排水三轴试验",
+                "value": "1",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_CD-等p排水三轴试验",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_CD-等p排水三轴试验",
+                "value": "100",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_CD-等p排水三轴试验",
+                "value": "100",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Line styles, Point types \u0026 Colors"
+        },
+        {
+          "keyword": "AXIS",
+          "attributes": {},
+          "data_rows": [],
+          "desc": "Tics, Labels \u0026 Range settings"
+        },
+        {
+          "keyword": "LAYOUT",
+          "attributes": {
+            "AXIS_LANG": "EN",
+            "FORMAT_X": "%-g",
+            "FORMAT_Y": "%-g",
+            "GRID": "xtics ytics",
+            "KEY_COLUMNS": "2",
+            "KEY_POS": "top right",
+            "RANGE_MODE": "Auto-fit",
+            "SCALE": "Linear",
+            "TICS_OUT": "in",
+            "XTICS_AUTO_STEP": "",
+            "XTICS_NUM": "4",
+            "X_LABEL_VAL": "Axial strain {/Symbol e}_{a} / %",
+            "Y_LABEL_VAL": "Volumetric strain {/Symbol e}_{v} / %",
+            "ZEROAXIS": "off"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "axis_lang",
+                "value": "EN",
+                "label": " Language     ",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "EN",
+                  "ZH"
+                ],
+                "hint": "Switch axis labels and tutorial language (English / Chinese)"
+              },
+              {
+                "key": "scale",
+                "value": "Linear",
+                "label": " Coordinate   ",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "Linear",
+                  "Log-X",
+                  "Log-Y",
+                  "Log-XY"
+                ],
+                "hint": "Set linear or logarithmic scaling for active axes"
+              },
+              {
+                "key": "tics_out",
+                "value": "in",
+                "label": " Tics Direction",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "in",
+                  "out"
+                ],
+                "hint": "Direction of the tick marks relative to the plot border (inside/outside)"
+              }
+            ],
+            [
+              {
+                "key": "xtic_fmt",
+                "value": "%-g",
+                "label": " X-Tick Format ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Format string for X-axis tick labels (e.g., %-g, %.2f)"
+              },
+              {
+                "key": "ytic_fmt",
+                "value": "%-g",
+                "label": " Y-Tick Format ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Format string for Y-axis tick labels (e.g., %-g, %.2f)"
+              },
+              {
+                "key": "mx_tics",
+                "value": "3",
+                "label": " X Minor Tics  ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of minor intervals between major X tics (1 to disable)"
+              },
+              {
+                "key": "my_tics",
+                "value": "3",
+                "label": " Y Minor Tics  ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of minor intervals between major Y tics (1 to disable)"
+              }
+            ],
+            [
+              {
+                "key": "x_min",
+                "value": "*",
+                "label": " X Min Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Minimum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "x_max",
+                "value": "*",
+                "label": " X Max Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Maximum boundary for X axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_min",
+                "value": "*",
+                "label": " Y Min Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Minimum boundary for Y axis. Use '*' for auto-fit"
+              },
+              {
+                "key": "y_max",
+                "value": "*",
+                "label": " Y Max Bound   ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Maximum boundary for Y axis. Use '*' for auto-fit"
+              }
+            ],
+            [
+              {
+                "key": "title",
+                "value": "",
+                "label": " Main Title    ",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Main title text of the plot. Empty indicates LaTeX caption mode."
+              },
+              {
+                "key": "key_columns",
+                "value": "2",
+                "label": " Legend Columns",
+                "unit": "-",
+                "fixed": false,
+                "hint": "Number of columns to split the legend entries into"
+              },
+              {
+                "key": "key_pos",
+                "value": "top right",
+                "label": " Legend Pos    ",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "top right",
+                  "top left",
+                  "bottom right",
+                  "bottom left",
+                  "outside",
+                  "off"
+                ],
+                "hint": "Spatial anchoring zone for gnuplot key/legend panel"
+              }
+            ],
+            [
+              {
+                "key": "grid",
+                "value": "xtics ytics",
+                "label": " Grid Style    ",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "xtics ytics",
+                  "xtics ytics mxtics mytics",
+                  "off"
+                ],
+                "hint": "Toggle standard or high-density minor tics grid overlay"
+              },
+              {
+                "key": "zeroaxis",
+                "value": "off",
+                "label": " ZeroAxis (0,0)",
+                "unit": "-",
+                "fixed": false,
+                "options": [
+                  "off",
+                  "on"
+                ],
+                "hint": "Draw prominence lines for X=0 and Y=0 baselines"
+              }
+            ]
+          ],
+          "desc": "Margins, Origin \u0026 Object layout"
+        },
+        {
+          "keyword": "SOURCE",
+          "attributes": {
+            "enable_CD-等p排水三轴试验": "YES",
+            "enable_CU-等围压不排水三轴试验": "YES",
+            "enable_CU-等围压排水三轴试验": "YES",
+            "exp_CD-等p排水三轴试验": "CD-等p排水三轴试验",
+            "exp_CU-等围压不排水三轴试验": "CU-等围压不排水三轴试验",
+            "exp_CU-等围压排水三轴试验": "CU-等围压排水三轴试验",
+            "exp_enable_CD-等p排水三轴试验": "YES",
+            "exp_enable_CU-等围压不排水三轴试验": "YES",
+            "exp_enable_CU-等围压排水三轴试验": "YES",
+            "global_plot_mode": "ALL",
+            "plot_content_mode_CD-等p排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压不排水三轴试验": "ALL",
+            "plot_content_mode_CU-等围压排水三轴试验": "ALL",
+            "sim_CD-等p排水三轴试验": "Sim CD-等p排水三轴试验",
+            "sim_CU-等围压不排水三轴试验": "Sim CU-等围压不排水三轴试验",
+            "sim_CU-等围压排水三轴试验": "Sim CU-等围压排水三轴试验",
+            "sim_enable_CD-等p排水三轴试验": "YES",
+            "sim_enable_CU-等围压不排水三轴试验": "YES",
+            "sim_enable_CU-等围压排水三轴试验": "YES",
+            "x_col": "0",
+            "y_col": "1"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "x_col",
+                "value": "0",
+                "label": " [yellow::b]⌖ X-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "y_col",
+                "value": "1",
+                "label": " [yellow::b]⌖ Y-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "global_plot_mode",
+                "value": "ALL",
+                "label": " [yellow::b]⌖ 数据切换模式?[-] ",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "ALL",
+                  "EXP_ONLY",
+                  "SIM_ONLY"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": " [dodgerblue::b]• CASE: CU-等围压排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压排水三轴试验",
+                "value": "CU-等围压排水三轴试验",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压排水三轴试验",
+                "value": "Sim CU-等围压排水三轴试验",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": " [black::b]• CASE: CU-等围压不排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CU-等围压不排水三轴试验",
+                "value": "CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CU-等围压不排水三轴试验",
+                "value": "Sim CU-等围压不排水三轴试验",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CU-等围压不排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": " [black::b]• CASE: CD-等p排水三轴试验[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_CD-等p排水三轴试验",
+                "value": "CD-等p排水三轴试验",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_CD-等p排水三轴试验",
+                "value": "Sim CD-等p排水三轴试验",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_CD-等p排水三轴试验",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ]
+          ],
+          "desc": ""
+        }
+      ],
+      "terminal": "",
+      "x_col_key": "",
+      "y_col_key": "",
+      "grid": false,
+      "x_range": "",
+      "y_range": "",
+      "custom_script": "",
+      "separator": "",
+      "show_legend": false,
+      "legend_pos": ""
+    }
+  ]
+}
