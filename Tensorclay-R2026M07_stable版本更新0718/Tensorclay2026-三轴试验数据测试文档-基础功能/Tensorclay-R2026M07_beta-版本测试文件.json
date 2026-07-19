@@ -1,0 +1,1992 @@
+{
+  "cases": [
+    {
+      "case_name": "sigc-50kPa",
+      "model_type": "HASP_Clay",
+      "blocks": [
+        {
+          "keyword": "UMAT",
+          "attributes": {
+            "MODEL": "MCC"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "mcs",
+                "value": "1.82",
+                "label": "Critical state stress ratio (M)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "gamma",
+                "value": "1.26",
+                "label": "Reference void ratio (at p=1kPa)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "ramda",
+                "value": "0.086",
+                "label": "Compression index (λ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "kappa",
+                "value": "0.012",
+                "label": "Swelling index (κ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "poi",
+                "value": "0.20",
+                "label": "Poisson's ratio (ν)",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Bounding Surface Model for OC Clays (Jocković 2017)"
+        },
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "TYPE": "SDB_FILE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "path",
+                "value": "/Users/lhc/Documents/TensorclayStudio/Tensorclay-R2026M07_beta版本更新0714/C5_G01.sdb",
+                "label": "SDB File Path",
+                "unit": "File",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Experimental Data Alignment"
+        },
+        {
+          "keyword": "INIT",
+          "attributes": {
+            "TYPE": "STATE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "e0",
+                "value": "0.8",
+                "label": "Initial Void Ratio",
+                "unit": "",
+                "fixed": false
+              },
+              {
+                "key": "p",
+                "value": "50.0",
+                "label": "Mean Stress (p')",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "q",
+                "value": "0.0",
+                "label": "Deviatoric Stress (q)",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "u0",
+                "value": "0.0",
+                "label": "Pore Pressure (u0)",
+                "unit": "kPa",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial Stress \u0026 State"
+        },
+        {
+          "keyword": "STEP",
+          "attributes": {
+            "ID": "1",
+            "NAME": "Phase_1",
+            "TYPE": "MONO"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "test",
+                "value": "triax_drained",
+                "label": "Test Mode",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "triax_drained",
+                  "triax_undrained",
+                  "edometric"
+                ]
+              },
+              {
+                "key": "condition",
+                "value": "epsa",
+                "label": "Control Mode",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "epax",
+                  "q",
+                  "p",
+                  "v"
+                ]
+              },
+              {
+                "key": "value",
+                "value": "0.2",
+                "label": "Target Value",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial Loading Phase"
+        }
+      ],
+      "updated_at": "2026-07-14T12:29:22.013059+08:00",
+      "PlotLoadType": "mono",
+      "PlotShowme": "true",
+      "PlotDrainType": "drained",
+      "data_source": {
+        "sim_data_path": "",
+        "exp_data_path": ""
+      },
+      "gnuplot_style": {
+        "enabled": false,
+        "sim_line": {
+          "lc": "",
+          "lw": 0,
+          "lt": 0,
+          "label": ""
+        },
+        "exp_point": {
+          "pc": "",
+          "ps": 0,
+          "pt": 0,
+          "label": "",
+          "show": false
+        }
+      }
+    },
+    {
+      "case_name": "sigc-100kPa",
+      "model_type": "HASP_Clay",
+      "blocks": [
+        {
+          "keyword": "UMAT",
+          "attributes": {
+            "MODEL": "MCC"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "mcs",
+                "value": "1.82",
+                "label": "Critical state stress ratio (M)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "gamma",
+                "value": "1.26",
+                "label": "Reference void ratio (at p=1kPa)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "ramda",
+                "value": "0.086",
+                "label": "Compression index (λ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "kappa",
+                "value": "0.012",
+                "label": "Swelling index (κ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "poi",
+                "value": "0.20",
+                "label": "Poisson's ratio (ν)",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Bounding Surface Model for OC Clays (Jocković 2017)"
+        },
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "TYPE": "SDB_FILE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "path",
+                "value": "/Users/lhc/Documents/TensorclayStudio/Tensorclay-R2026M07_beta版本更新0714/C5_G02.sdb",
+                "label": "SDB File Path",
+                "unit": "File",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Experimental Data Alignment"
+        },
+        {
+          "keyword": "INIT",
+          "attributes": {
+            "TYPE": "STATE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "e0",
+                "value": "0.8",
+                "label": "Initial Void Ratio",
+                "unit": "",
+                "fixed": false
+              },
+              {
+                "key": "p",
+                "value": "100.0",
+                "label": "Mean Stress (p')",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "q",
+                "value": "0.0",
+                "label": "Deviatoric Stress (q)",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "u0",
+                "value": "0.0",
+                "label": "Pore Pressure (u0)",
+                "unit": "kPa",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial Stress \u0026 State"
+        },
+        {
+          "keyword": "STEP",
+          "attributes": {
+            "ID": "1",
+            "NAME": "Phase_1",
+            "TYPE": "MONO"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "test",
+                "value": "triax_drained",
+                "label": "Test Mode",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "triax_drained",
+                  "triax_undrained",
+                  "edometric"
+                ]
+              },
+              {
+                "key": "condition",
+                "value": "epsa",
+                "label": "Control Mode",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "epax",
+                  "q",
+                  "p",
+                  "v"
+                ]
+              },
+              {
+                "key": "value",
+                "value": "0.2",
+                "label": "Target Value",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial Loading Phase"
+        }
+      ],
+      "updated_at": "2026-07-14T12:19:00.008421+08:00",
+      "PlotLoadType": "mono",
+      "PlotShowme": "true",
+      "PlotDrainType": "drained",
+      "data_source": {
+        "sim_data_path": "",
+        "exp_data_path": ""
+      },
+      "gnuplot_style": {
+        "enabled": false,
+        "sim_line": {
+          "lc": "",
+          "lw": 0,
+          "lt": 0,
+          "label": ""
+        },
+        "exp_point": {
+          "pc": "",
+          "ps": 0,
+          "pt": 0,
+          "label": "",
+          "show": false
+        }
+      }
+    },
+    {
+      "case_name": "sigc-200kPa",
+      "model_type": "HASP_Clay",
+      "blocks": [
+        {
+          "keyword": "UMAT",
+          "attributes": {
+            "MODEL": "MCC"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "mcs",
+                "value": "1.82",
+                "label": "Critical state stress ratio (M)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "gamma",
+                "value": "1.26",
+                "label": "Reference void ratio (at p=1kPa)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "ramda",
+                "value": "0.086",
+                "label": "Compression index (λ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "kappa",
+                "value": "0.012",
+                "label": "Swelling index (κ)",
+                "unit": "-",
+                "fixed": false
+              },
+              {
+                "key": "poi",
+                "value": "0.20",
+                "label": "Poisson's ratio (ν)",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Bounding Surface Model for OC Clays (Jocković 2017)"
+        },
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "TYPE": "SDB_FILE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "path",
+                "value": "/Users/lhc/Documents/TensorclayStudio/Tensorclay-R2026M07_beta版本更新0714/C5_G03.sdb",
+                "label": "SDB File Path",
+                "unit": "File",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Experimental Data Alignment"
+        },
+        {
+          "keyword": "INIT",
+          "attributes": {
+            "TYPE": "STATE"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "e0",
+                "value": "0.8",
+                "label": "Initial Void Ratio",
+                "unit": "",
+                "fixed": false
+              },
+              {
+                "key": "p",
+                "value": "200.0",
+                "label": "Mean Stress (p')",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "q",
+                "value": "0.0",
+                "label": "Deviatoric Stress (q)",
+                "unit": "kPa",
+                "fixed": false
+              },
+              {
+                "key": "u0",
+                "value": "0.0",
+                "label": "Pore Pressure (u0)",
+                "unit": "kPa",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial Stress \u0026 State"
+        },
+        {
+          "keyword": "STEP",
+          "attributes": {
+            "ID": "1",
+            "NAME": "Phase_1",
+            "TYPE": "MONO"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "test",
+                "value": "triax_drained",
+                "label": "Test Mode",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "triax_drained",
+                  "triax_undrained",
+                  "edometric"
+                ]
+              },
+              {
+                "key": "condition",
+                "value": "epsa",
+                "label": "Control Mode",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "epax",
+                  "q",
+                  "p",
+                  "v"
+                ]
+              },
+              {
+                "key": "value",
+                "value": "0.2",
+                "label": "Target Value",
+                "unit": "-",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Initial Loading Phase"
+        }
+      ],
+      "updated_at": "2026-07-14T12:19:39.784935+08:00",
+      "PlotLoadType": "mono",
+      "PlotShowme": "true",
+      "PlotDrainType": "drained",
+      "data_source": {
+        "sim_data_path": "",
+        "exp_data_path": ""
+      },
+      "gnuplot_style": {
+        "enabled": false,
+        "sim_line": {
+          "lc": "",
+          "lw": 0,
+          "lt": 0,
+          "label": ""
+        },
+        "exp_point": {
+          "pc": "",
+          "ps": 0,
+          "pt": 0,
+          "label": "",
+          "show": false
+        }
+      }
+    }
+  ],
+  "active_solver_id": "tensorclay",
+  "solver_history": {},
+  "active_gnuplot_idx": 0,
+  "gnuplot_configs": [
+    {
+      "graph_title": "plot_stress",
+      "blocks": [
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "enable_sigc-100kPa": "YES",
+            "enable_sigc-200kPa": "YES",
+            "enable_sigc-50kPa": "YES",
+            "exp_enable_sigc-100kPa": "YES",
+            "exp_enable_sigc-200kPa": "YES",
+            "exp_enable_sigc-50kPa": "YES",
+            "exp_sigc-100kPa": "$\\sigma_3$ = sigc-100 kPa",
+            "exp_sigc-200kPa": "$\\sigma_3$ = sigc-200 kPa",
+            "exp_sigc-50kPa": "$\\sigma_3$ = sigc-50 kPa",
+            "global_plot_mode": "ALL",
+            "plot_content_mode_sigc-100kPa": "ALL",
+            "plot_content_mode_sigc-200kPa": "ALL",
+            "plot_content_mode_sigc-50kPa": "ALL",
+            "sim_enable_sigc-100kPa": "YES",
+            "sim_enable_sigc-200kPa": "YES",
+            "sim_enable_sigc-50kPa": "YES",
+            "sim_sigc-100kPa": "Sim $\\sigma_3$ = sigc-100 kPa",
+            "sim_sigc-200kPa": "Sim $\\sigma_3$ = sigc-200 kPa",
+            "sim_sigc-50kPa": "Sim $\\sigma_3$ = sigc-50 kPa",
+            "x_col": "0",
+            "y_col": "7"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "x_col",
+                "value": "0",
+                "label": " [yellow::b]⌖ X-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "y_col",
+                "value": "7",
+                "label": " [yellow::b]⌖ Y-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "global_plot_mode",
+                "value": "ALL",
+                "label": " [yellow::b]⌖ 数据切换模式?[-] ",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "ALL",
+                  "EXP_ONLY",
+                  "SIM_ONLY"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_sigc-50kPa",
+                "value": "sigc-50kPa",
+                "label": " [dodgerblue::b]• CASE: sigc-50kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_sigc-50kPa",
+                "value": "$\\sigma_3$ = sigc-50 kPa",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_sigc-50kPa",
+                "value": "Sim $\\sigma_3$ = sigc-50 kPa",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_sigc-50kPa",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_sigc-100kPa",
+                "value": "sigc-100kPa",
+                "label": " [black::b]• CASE: sigc-100kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_sigc-100kPa",
+                "value": "$\\sigma_3$ = sigc-100 kPa",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_sigc-100kPa",
+                "value": "Sim $\\sigma_3$ = sigc-100 kPa",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_sigc-100kPa",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_sigc-200kPa",
+                "value": "sigc-200kPa",
+                "label": " [black::b]• CASE: sigc-200kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_sigc-200kPa",
+                "value": "$\\sigma_3$ = sigc-200 kPa",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_sigc-200kPa",
+                "value": "Sim $\\sigma_3$ = sigc-200 kPa",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_sigc-200kPa",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ]
+          ],
+          "desc": "Gnuplot Data alignment \u0026 Column mapping"
+        },
+        {
+          "keyword": "FIGURE",
+          "attributes": {
+            "FONT_FACE": "Times-New-Roman",
+            "FONT_SIZE": "14",
+            "OUTPUT": "plot_res.pdf",
+            "TERM": "pdfcairo"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "canvas_w",
+                "value": "5.00in",
+                "label": " [blue]⟷[-] Canvas Width",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Horizontal length of the rendering viewport"
+              },
+              {
+                "key": "canvas_h",
+                "value": "3.50in",
+                "label": " [blue]↕[-] Canvas Height",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Vertical length of the rendering viewport"
+              },
+              {
+                "key": "enhanced",
+                "value": "enhanced",
+                "label": " [yellow]A[-] Enhanced Text",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "enhanced",
+                  "noenhanced"
+                ],
+                "hint": "Enable script-level symbols and Greek sub/superscripts"
+              },
+              {
+                "key": "palette",
+                "value": "Mono-Print",
+                "label": " [magenta]🎨 Academic Palette",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "Elsevier-Classic",
+                  "Mono-Print",
+                  "Stress-Gradient",
+                  "Nature-Geology",
+                  "Colorblind-Friendly",
+                  "Geotechnique-Classic"
+                ],
+                "hint": "Standardized line style configurations for top journals"
+              },
+              {
+                "key": "color",
+                "value": "color",
+                "label": " [red]●[-] Color Mode",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "color",
+                  "mono"
+                ],
+                "hint": "Toggle between chromatic spectrum and pure monochrome lines"
+              },
+              {
+                "key": "background",
+                "value": "white",
+                "label": " [white]□[-] Background",
+                "unit": "rgb",
+                "fixed": true,
+                "hint": "Canvas background color specification"
+              }
+            ]
+          ],
+          "desc": "Terminal settings \u0026 Canvas dimensions"
+        },
+        {
+          "keyword": "AXES",
+          "attributes": {},
+          "data_rows": [],
+          "desc": "Subplot \u0026 Graph title configurations"
+        },
+        {
+          "keyword": "ARTIST",
+          "attributes": {
+            "LINE_TYPE": "1",
+            "LINE_WIDTH": "6",
+            "MARK_SIZE": "0.8",
+            "MARK_TYPE": "auto",
+            "SMOOTH": "none",
+            "STYLE": "points",
+            "exp_skip_sigc-100kPa": "200",
+            "exp_skip_sigc-200kPa": "200",
+            "exp_skip_sigc-50kPa": "200",
+            "exp_x_sigc-100kPa": "1.0",
+            "exp_x_sigc-200kPa": "1.0",
+            "exp_x_sigc-50kPa": "1.0",
+            "exp_y_sigc-100kPa": "1.0",
+            "exp_y_sigc-200kPa": "1.0",
+            "exp_y_sigc-50kPa": "1.0",
+            "sim_x_sigc-100kPa": "1.0",
+            "sim_x_sigc-200kPa": "1.0",
+            "sim_x_sigc-50kPa": "1.0",
+            "sim_y_sigc-100kPa": "1.0",
+            "sim_y_sigc-200kPa": "1.0",
+            "sim_y_sigc-50kPa": "1.0"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "case_header_sigc-50kPa",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: sigc-50kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_sigc-50kPa",
+                "value": "200",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_sigc-50kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_sigc-50kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_sigc-50kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_sigc-50kPa",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_sigc-100kPa",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: sigc-100kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_sigc-100kPa",
+                "value": "200",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_sigc-100kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_sigc-100kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_sigc-100kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_sigc-100kPa",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_sigc-200kPa",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: sigc-200kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_sigc-200kPa",
+                "value": "200",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_sigc-200kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_sigc-200kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_sigc-200kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_sigc-200kPa",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Line styles, Point types \u0026 Colors"
+        },
+        {
+          "keyword": "AXIS",
+          "attributes": {},
+          "data_rows": [],
+          "desc": "Tics, Labels \u0026 Range settings"
+        },
+        {
+          "keyword": "LAYOUT",
+          "attributes": {},
+          "data_rows": [],
+          "desc": "Margins, Origin \u0026 Object layout"
+        }
+      ],
+      "terminal": "",
+      "x_col_key": "",
+      "y_col_key": "",
+      "grid": false,
+      "x_range": "",
+      "y_range": "",
+      "custom_script": "",
+      "separator": "",
+      "show_legend": false,
+      "legend_pos": ""
+    },
+    {
+      "graph_title": "plot_strain",
+      "blocks": [
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "enable_sigc-100kPa": "YES",
+            "enable_sigc-200kPa": "YES",
+            "enable_sigc-50kPa": "YES",
+            "exp_enable_sigc-100kPa": "YES",
+            "exp_enable_sigc-200kPa": "YES",
+            "exp_enable_sigc-50kPa": "YES",
+            "exp_sigc-100kPa": "$\\sigma_3$ = sigc-100 kPa",
+            "exp_sigc-200kPa": "$\\sigma_3$ = sigc-200 kPa",
+            "exp_sigc-50kPa": "$\\sigma_3$ = sigc-50 kPa",
+            "global_plot_mode": "ALL",
+            "plot_content_mode_sigc-100kPa": "ALL",
+            "plot_content_mode_sigc-200kPa": "ALL",
+            "plot_content_mode_sigc-50kPa": "ALL",
+            "sim_enable_sigc-100kPa": "YES",
+            "sim_enable_sigc-200kPa": "YES",
+            "sim_enable_sigc-50kPa": "YES",
+            "sim_sigc-100kPa": "Sim $\\sigma_3$ = sigc-100 kPa",
+            "sim_sigc-200kPa": "Sim $\\sigma_3$ = sigc-200 kPa",
+            "sim_sigc-50kPa": "Sim $\\sigma_3$ = sigc-50 kPa",
+            "x_col": "0",
+            "y_col": "1"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "x_col",
+                "value": "0",
+                "label": " [yellow::b]⌖ X-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "y_col",
+                "value": "1",
+                "label": " [yellow::b]⌖ Y-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "global_plot_mode",
+                "value": "ALL",
+                "label": " [yellow::b]⌖ 数据切换模式?[-] ",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "ALL",
+                  "EXP_ONLY",
+                  "SIM_ONLY"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_sigc-50kPa",
+                "value": "sigc-50kPa",
+                "label": " [dodgerblue::b]• CASE: sigc-50kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_sigc-50kPa",
+                "value": "$\\sigma_3$ = sigc-50 kPa",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_sigc-50kPa",
+                "value": "Sim $\\sigma_3$ = sigc-50 kPa",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_sigc-50kPa",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_sigc-100kPa",
+                "value": "sigc-100kPa",
+                "label": " [black::b]• CASE: sigc-100kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_sigc-100kPa",
+                "value": "$\\sigma_3$ = sigc-100 kPa",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_sigc-100kPa",
+                "value": "Sim $\\sigma_3$ = sigc-100 kPa",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_sigc-100kPa",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_sigc-200kPa",
+                "value": "sigc-200kPa",
+                "label": " [black::b]• CASE: sigc-200kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_sigc-200kPa",
+                "value": "$\\sigma_3$ = sigc-200 kPa",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_sigc-200kPa",
+                "value": "Sim $\\sigma_3$ = sigc-200 kPa",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_sigc-200kPa",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ]
+          ],
+          "desc": "Gnuplot Data alignment \u0026 Column mapping"
+        },
+        {
+          "keyword": "FIGURE",
+          "attributes": {
+            "FONT_FACE": "Times-New-Roman",
+            "FONT_SIZE": "14",
+            "OUTPUT": "plot_res.pdf",
+            "TERM": "pdfcairo"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "canvas_w",
+                "value": "5.00in",
+                "label": " [blue]⟷[-] Canvas Width",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Horizontal length of the rendering viewport"
+              },
+              {
+                "key": "canvas_h",
+                "value": "3.50in",
+                "label": " [blue]↕[-] Canvas Height",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Vertical length of the rendering viewport"
+              },
+              {
+                "key": "enhanced",
+                "value": "enhanced",
+                "label": " [yellow]A[-] Enhanced Text",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "enhanced",
+                  "noenhanced"
+                ],
+                "hint": "Enable script-level symbols and Greek sub/superscripts"
+              },
+              {
+                "key": "palette",
+                "value": "Mono-Print",
+                "label": " [magenta]🎨 Academic Palette",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "Elsevier-Classic",
+                  "Mono-Print",
+                  "Stress-Gradient",
+                  "Nature-Geology",
+                  "Colorblind-Friendly",
+                  "Geotechnique-Classic"
+                ],
+                "hint": "Standardized line style configurations for top journals"
+              },
+              {
+                "key": "color",
+                "value": "color",
+                "label": " [red]●[-] Color Mode",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "color",
+                  "mono"
+                ],
+                "hint": "Toggle between chromatic spectrum and pure monochrome lines"
+              },
+              {
+                "key": "background",
+                "value": "white",
+                "label": " [white]□[-] Background",
+                "unit": "rgb",
+                "fixed": true,
+                "hint": "Canvas background color specification"
+              }
+            ]
+          ],
+          "desc": "Terminal settings \u0026 Canvas dimensions"
+        },
+        {
+          "keyword": "AXES",
+          "attributes": {},
+          "data_rows": [],
+          "desc": "Subplot \u0026 Graph title configurations"
+        },
+        {
+          "keyword": "ARTIST",
+          "attributes": {
+            "LINE_TYPE": "1",
+            "LINE_WIDTH": "6",
+            "MARK_SIZE": "0.8",
+            "MARK_TYPE": "auto",
+            "SMOOTH": "none",
+            "STYLE": "points",
+            "exp_skip_sigc-100kPa": "200",
+            "exp_skip_sigc-200kPa": "200",
+            "exp_skip_sigc-50kPa": "200",
+            "exp_x_sigc-100kPa": "1.0",
+            "exp_x_sigc-200kPa": "1.0",
+            "exp_x_sigc-50kPa": "1.0",
+            "exp_y_sigc-100kPa": "1.0",
+            "exp_y_sigc-200kPa": "1.0",
+            "exp_y_sigc-50kPa": "1.0",
+            "sim_x_sigc-100kPa": "1.0",
+            "sim_x_sigc-200kPa": "1.0",
+            "sim_x_sigc-50kPa": "1.0",
+            "sim_y_sigc-100kPa": "1.0",
+            "sim_y_sigc-200kPa": "1.0",
+            "sim_y_sigc-50kPa": "1.0"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "case_header_sigc-50kPa",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: sigc-50kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_sigc-50kPa",
+                "value": "200",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_sigc-50kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_sigc-50kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_sigc-50kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_sigc-50kPa",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_sigc-100kPa",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: sigc-100kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_sigc-100kPa",
+                "value": "200",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_sigc-100kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_sigc-100kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_sigc-100kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_sigc-100kPa",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_sigc-200kPa",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: sigc-200kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_sigc-200kPa",
+                "value": "200",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_sigc-200kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_sigc-200kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_sigc-200kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_sigc-200kPa",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Line styles, Point types \u0026 Colors"
+        },
+        {
+          "keyword": "AXIS",
+          "attributes": {},
+          "data_rows": [],
+          "desc": "Tics, Labels \u0026 Range settings"
+        },
+        {
+          "keyword": "LAYOUT",
+          "attributes": {},
+          "data_rows": [],
+          "desc": "Margins, Origin \u0026 Object layout"
+        }
+      ],
+      "terminal": "",
+      "x_col_key": "",
+      "y_col_key": "",
+      "grid": false,
+      "x_range": "",
+      "y_range": "",
+      "custom_script": "",
+      "separator": "",
+      "show_legend": false,
+      "legend_pos": ""
+    },
+    {
+      "graph_title": "plot_dilation",
+      "blocks": [
+        {
+          "keyword": "DATA",
+          "attributes": {
+            "enable_sigc-100kPa": "YES",
+            "enable_sigc-200kPa": "YES",
+            "enable_sigc-50kPa": "YES",
+            "exp_enable_sigc-100kPa": "YES",
+            "exp_enable_sigc-200kPa": "YES",
+            "exp_enable_sigc-50kPa": "YES",
+            "exp_sigc-100kPa": "$\\sigma_3$ = sigc-100 kPa",
+            "exp_sigc-200kPa": "$\\sigma_3$ = sigc-200 kPa",
+            "exp_sigc-50kPa": "$\\sigma_3$ = sigc-50 kPa",
+            "global_plot_mode": "ALL",
+            "plot_content_mode_sigc-100kPa": "ALL",
+            "plot_content_mode_sigc-200kPa": "ALL",
+            "plot_content_mode_sigc-50kPa": "ALL",
+            "sim_enable_sigc-100kPa": "YES",
+            "sim_enable_sigc-200kPa": "YES",
+            "sim_enable_sigc-50kPa": "YES",
+            "sim_sigc-100kPa": "Sim $\\sigma_3$ = sigc-100 kPa",
+            "sim_sigc-200kPa": "Sim $\\sigma_3$ = sigc-200 kPa",
+            "sim_sigc-50kPa": "Sim $\\sigma_3$ = sigc-50 kPa",
+            "x_col": "8",
+            "y_col": "11"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "x_col",
+                "value": "8",
+                "label": " [yellow::b]⌖ X-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "y_col",
+                "value": "11",
+                "label": " [yellow::b]⌖ Y-Axis Column[-] ",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "global_plot_mode",
+                "value": "ALL",
+                "label": " [yellow::b]⌖ 数据切换模式?[-] ",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "ALL",
+                  "EXP_ONLY",
+                  "SIM_ONLY"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_sigc-50kPa",
+                "value": "sigc-50kPa",
+                "label": " [dodgerblue::b]• CASE: sigc-50kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_sigc-50kPa",
+                "value": "$\\sigma_3$ = sigc-50 kPa",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_sigc-50kPa",
+                "value": "Sim $\\sigma_3$ = sigc-50 kPa",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_sigc-50kPa",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_sigc-100kPa",
+                "value": "sigc-100kPa",
+                "label": " [black::b]• CASE: sigc-100kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_sigc-100kPa",
+                "value": "$\\sigma_3$ = sigc-100 kPa",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_sigc-100kPa",
+                "value": "Sim $\\sigma_3$ = sigc-100 kPa",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_sigc-100kPa",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ],
+            [
+              {
+                "key": "case_title_sigc-200kPa",
+                "value": "sigc-200kPa",
+                "label": " [black::b]• CASE: sigc-200kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_sigc-200kPa",
+                "value": "$\\sigma_3$ = sigc-200 kPa",
+                "label": "   ┣━ 🔬 试验图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_sigc-200kPa",
+                "value": "Sim $\\sigma_3$ = sigc-200 kPa",
+                "label": "   ┣━ 🧮 模拟图例",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "enable_sigc-200kPa",
+                "value": "YES",
+                "label": "   ┗━ [gray]Plot this Case?[-]",
+                "unit": "",
+                "fixed": false,
+                "options": [
+                  "YES",
+                  "NO"
+                ]
+              }
+            ]
+          ],
+          "desc": "Gnuplot Data alignment \u0026 Column mapping"
+        },
+        {
+          "keyword": "FIGURE",
+          "attributes": {
+            "FONT_FACE": "Times-New-Roman",
+            "FONT_SIZE": "14",
+            "OUTPUT": "plot_res.pdf",
+            "TERM": "pdfcairo"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "canvas_w",
+                "value": "5.00in",
+                "label": " [blue]⟷[-] Canvas Width",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Horizontal length of the rendering viewport"
+              },
+              {
+                "key": "canvas_h",
+                "value": "3.50in",
+                "label": " [blue]↕[-] Canvas Height",
+                "unit": "in/px",
+                "fixed": true,
+                "hint": "Vertical length of the rendering viewport"
+              },
+              {
+                "key": "enhanced",
+                "value": "enhanced",
+                "label": " [yellow]A[-] Enhanced Text",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "enhanced",
+                  "noenhanced"
+                ],
+                "hint": "Enable script-level symbols and Greek sub/superscripts"
+              },
+              {
+                "key": "palette",
+                "value": "Mono-Print",
+                "label": " [magenta]🎨 Academic Palette",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "Elsevier-Classic",
+                  "Mono-Print",
+                  "Stress-Gradient",
+                  "Nature-Geology",
+                  "Colorblind-Friendly",
+                  "Geotechnique-Classic"
+                ],
+                "hint": "Standardized line style configurations for top journals"
+              },
+              {
+                "key": "color",
+                "value": "color",
+                "label": " [red]●[-] Color Mode",
+                "unit": "-",
+                "fixed": true,
+                "options": [
+                  "color",
+                  "mono"
+                ],
+                "hint": "Toggle between chromatic spectrum and pure monochrome lines"
+              },
+              {
+                "key": "background",
+                "value": "white",
+                "label": " [white]□[-] Background",
+                "unit": "rgb",
+                "fixed": true,
+                "hint": "Canvas background color specification"
+              }
+            ]
+          ],
+          "desc": "Terminal settings \u0026 Canvas dimensions"
+        },
+        {
+          "keyword": "AXES",
+          "attributes": {},
+          "data_rows": [],
+          "desc": "Subplot \u0026 Graph title configurations"
+        },
+        {
+          "keyword": "ARTIST",
+          "attributes": {
+            "LINE_TYPE": "1",
+            "LINE_WIDTH": "6",
+            "MARK_SIZE": "0.8",
+            "MARK_TYPE": "auto",
+            "SMOOTH": "none",
+            "STYLE": "points",
+            "exp_skip_sigc-100kPa": "200",
+            "exp_skip_sigc-200kPa": "200",
+            "exp_skip_sigc-50kPa": "200",
+            "exp_x_sigc-100kPa": "1.0",
+            "exp_x_sigc-200kPa": "1.0",
+            "exp_x_sigc-50kPa": "1.0",
+            "exp_y_sigc-100kPa": "1.0",
+            "exp_y_sigc-200kPa": "1.0",
+            "exp_y_sigc-50kPa": "1.0",
+            "sim_x_sigc-100kPa": "1.0",
+            "sim_x_sigc-200kPa": "1.0",
+            "sim_x_sigc-50kPa": "1.0",
+            "sim_y_sigc-100kPa": "1.0",
+            "sim_y_sigc-200kPa": "1.0",
+            "sim_y_sigc-50kPa": "1.0"
+          },
+          "data_rows": [
+            [
+              {
+                "key": "case_header_sigc-50kPa",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: sigc-50kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_sigc-50kPa",
+                "value": "200",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_sigc-50kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_sigc-50kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_sigc-50kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_sigc-50kPa",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_sigc-100kPa",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: sigc-100kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_sigc-100kPa",
+                "value": "200",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_sigc-100kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_sigc-100kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_sigc-100kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_sigc-100kPa",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "case_header_sigc-200kPa",
+                "value": "",
+                "label": " [dodgerblue::b]• CASE: sigc-200kPa[-]",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_skip_sigc-200kPa",
+                "value": "200",
+                "label": "    ┣━ ⏩ EXP 步长",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_x_sigc-200kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "exp_y_sigc-200kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 EXP Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_x_sigc-200kPa",
+                "value": "1.0",
+                "label": "    ┣━ 📐 SIM X-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ],
+            [
+              {
+                "key": "sim_y_sigc-200kPa",
+                "value": "1.0",
+                "label": "    ┗━ 📐 SIM Y-Factor",
+                "unit": "",
+                "fixed": false
+              }
+            ]
+          ],
+          "desc": "Line styles, Point types \u0026 Colors"
+        },
+        {
+          "keyword": "AXIS",
+          "attributes": {},
+          "data_rows": [],
+          "desc": "Tics, Labels \u0026 Range settings"
+        },
+        {
+          "keyword": "LAYOUT",
+          "attributes": {},
+          "data_rows": [],
+          "desc": "Margins, Origin \u0026 Object layout"
+        }
+      ],
+      "terminal": "",
+      "x_col_key": "",
+      "y_col_key": "",
+      "grid": false,
+      "x_range": "",
+      "y_range": "",
+      "custom_script": "",
+      "separator": "",
+      "show_legend": false,
+      "legend_pos": ""
+    }
+  ]
+}
